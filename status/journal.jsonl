@@ -12,3 +12,5 @@
 {"at":"2026-11-15T23:19:19Z","feature":"initial","stage":"tech-designer","kind":"skip","text":"No hacemos el diseño técnico aparte: este proyecto no lo necesita (set by user).","refs":[]}
 {"at":"2026-11-15T23:19:19Z","feature":"initial","stage":"gap-detector","kind":"skip","text":"No hacemos la búsqueda de lo que falta en el código: este proyecto no lo necesita (set by user).","refs":[]}
 {"at":"2026-11-15T23:19:19Z","feature":"initial","stage":"route","kind":"decision","text":"Acordamos el recorrido: se harán 0 etapas opcionales y se dejan fuera 7.","refs":[],"by":"Andres Leon (Cliente) vía telegram"}
+{"at":"2026-11-15T23:20:50Z","feature":"initial","stage":"plan-architect","kind":"start","text":"Vamos a dividir el trabajo en entregas que puedas ver y probar","refs":[]}
+{"at":"2026-11-15T23:20:50Z","feature":"initial","stage":"plan-architect","kind":"done","text":"Planificamos 1 entrega que cubre todo el recorrido: apuntarse, esperar, darse de baja y gestionar plazas con listas compartidas","refs":[]}
