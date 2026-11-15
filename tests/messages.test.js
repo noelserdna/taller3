@@ -40,8 +40,8 @@ describe('catálogo de textos', () => {
     expect(textoResultado({ tipo: 'baja', nombre: 'Pablo' })).toBe('Baja registrada para Pablo');
   });
 
-  // REQ-C-001: "All interface texts SHALL be in Spanish"
-  test('REQ-C-001 el catálogo es igual a los mensajes esperados en español', () => {
+  // REQ-C-001 AC1: "All interface texts SHALL be in Spanish"
+  test('REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español', () => {
     expect(mensajes).toEqual(esperados);
     expect(etiquetas.titulo).toBe('Taller de cerámica');
   });

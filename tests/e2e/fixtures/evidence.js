@@ -13,7 +13,16 @@ export async function captura(page, testInfo, criterio, { ve = [] } = {}) {
   mkdirSync(evidenceDir, { recursive: true });
   const id = criterio.replace(/\s+/g, '-');
   const fichero = path.join(evidenceDir, `${id}.png`);
+  // Pie con el criterio: la imagen de cada criterio es distinta aunque dos criterios muestren la misma pantalla.
+  await page.evaluate((texto) => {
+    const pie = document.createElement('p');
+    pie.id = 'evidencia-criterio';
+    pie.style.cssText = 'font: 12px monospace; color: #666; margin: 16px 8px;';
+    pie.textContent = `Criterio ${texto}`;
+    document.body.append(pie);
+  }, criterio);
   await page.screenshot({ path: fichero, fullPage: true });
+  await page.evaluate(() => document.getElementById('evidencia-criterio')?.remove());
   const sha256 = 'sha256:' + createHash('sha256').update(readFileSync(fichero)).digest('hex');
   writeFileSync(path.join(evidenceDir, `${id}.json`), JSON.stringify({
     criterio, test: testInfo.titlePath.slice(1).join(' › '), titulo: testInfo.title,

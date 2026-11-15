@@ -9,8 +9,8 @@ const fuentes = (dir) =>
   });
 
 describe('restricciones', () => {
-  // REQ-C-002: "a static check reads package.json (vite, vitest) and the source, and fails if the shared data is read or written in localStorage/sessionStorage/IndexedDB or if any request goes to a host other than the application's own"
-  test('REQ-C-002 Vite + Vitest, listas solo en el servidor y sin otros hosts', () => {
+  // REQ-C-002 AC1: "a static check reads package.json (vite, vitest) and the source, and fails if the shared data is read or written in localStorage/sessionStorage/IndexedDB or if any request goes to a host other than the application's own"
+  test('REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts', () => {
     const paquete = JSON.parse(readFileSync('package.json', 'utf8'));
     const deps = { ...paquete.dependencies, ...paquete.devDependencies };
     expect(deps).toHaveProperty('vite');
