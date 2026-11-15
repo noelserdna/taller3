@@ -1,0 +1,174 @@
+// Vendored by sdd-pipeline 0.3.2 (scripts/lib/captures-lint.mjs) by install-git-hooks.sh; re-install overwrites it — edit the plugin, not this copy.
+// captures-lint.mjs — `sdd lint --captures`: before the acceptance, does each capture show what its criterion promises?
+// Node >= 18, no dependencies. Library only: no console output, no process.exit.
+//
+// The club (Hermes, 11/2026) had 27 WRONG-CAPTURE findings out of 54 adversarial ones: the test checked by API or CSV
+// and the capture did not show what the criterion promised; a capture came from a test.step of a test whose title cited
+// other criteria; one image backed ten criteria. Each finding below is a pattern of that run, found without a browser.
+//
+//   C-01 error    a capture call (`captura(`, `captureCriterion(`, `.screenshot(`) comes after an API check
+//                 (`request.`, `fetch(`) with no on-screen assertion in between (`expect(<page>.getBy…|locator(…))`,
+//                 or the helper's own `{ ve: [...] }`): what the capture should show was checked off-screen.
+//   C-02 warning  one image backs more than 3 criteria, or an image that shows a criterion is named after another one.
+//   C-03 error    the test that takes a REQ-F criterion's capture does not cite that criterion in its title: statically
+//                 (the capture id names a criterion the enclosing test's title does not cite — a test.step does not
+//                 count) and in the ledger (`unbound_captures`: the PNG is an attachment of such a test).
+//   C-04 warning  an id cited in a test file (UC-NNN, REQ-X-NNN, WF-NNN, AC-NNN-NN) that exists nowhere in
+//                 requirements/, spec/, plan/, design/ or ux/.
+import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
+import path from "node:path";
+import { testKeys, scenarioIndex } from "./acceptance.mjs";
+import { splitComments, testFiles } from "./quotes.mjs";
+
+const CAPTURE_CALL = /\b(captura|captureCriterion|capturar|captureEvidence)\s*\(|\.screenshot\s*\(/g;
+const API_CALL = /\brequest\s*\.\s*(get|post|put|patch|delete|fetch|head)\s*\(|\bfetch\s*\(/g;
+const LOCATOR_ASSERT = /expect(?:\.soft)?\s*\(\s*[\w$.]*?(?:getBy\w+|locator|frameLocator)\s*\(|expect(?:\.soft)?\s*\(\s*[\w$]+\s*\)\s*\.\s*(?:toHaveTitle|toHaveURL)\b|\bve\s*:\s*\[/;
+const TEST_START = /^\s*(?:test|it)(?:\.(?:only|skip|fixme|fail|slow))?\s*\(\s*(['"`])((?:\\.|(?!\1).)*)\1/;
+const ID_RE = /(?<![A-Za-z0-9])(UC-\d{3,}|WF-\d{3,}|AC-\d{3,}-\d{2,}|REQ-[A-Z]+(?:-[A-Z0-9]+)*-\d{3,})(?![A-Za-z0-9])/g;
+
+const lineOf = (text, idx) => text.slice(0, idx).split("\n").length;
+
+/** Test blocks of a source file: [{ title, start (offset), end, line }] (a block runs to the next test at its indent or less). */
+function testBlocks(code) {
+  const lines = code.split("\n");
+  const starts = [];
+  let off = 0;
+  lines.forEach((l, i) => {
+    const m = l.match(TEST_START);
+    if (m) starts.push({ title: m[2], start: off, line: i + 1, indent: l.length - l.trimStart().length });
+    off += l.length + 1;
+  });
+  return starts.map((s, k) => {
+    const next = starts.slice(k + 1).find((x) => x.indent <= s.indent);
+    return { ...s, end: next ? next.start : code.length };
+  });
+}
+
+/** The first string argument after the first two of a capture call (`captura(page, testInfo, 'AC-008-04')`). */
+function captureId(code, at) {
+  const m = code.slice(at, at + 300).match(/^[^(]*\(\s*[^,()]+,\s*[^,()]+,\s*(['"`])((?:\\.|(?!\1).)*)\1/);
+  return m ? m[2] : null;
+}
+
+/** Ids that exist in the repo's documents. */
+function knownIds(root) {
+  const ids = new Set();
+  const walk = (abs, depth) => {
+    let st;
+    try { st = statSync(abs); } catch { return; }
+    if (st.isDirectory()) {
+      if (depth > 6) return;
+      let es = [];
+      try { es = readdirSync(abs); } catch { return; }
+      for (const e of es) if (!e.startsWith(".") && e !== "node_modules") walk(path.join(abs, e), depth + 1);
+    } else if (/\.(md|ya?ml|json|feature)$/i.test(abs) && st.size < 4 * 1024 * 1024) {
+      let t = "";
+      try { t = readFileSync(abs, "utf8"); } catch { return; }
+      for (const m of t.matchAll(ID_RE)) ids.add(m[1]);
+    }
+  };
+  for (const d of ["requirements", "spec", "plan", "design", "ux"]) if (existsSync(path.join(root, d))) walk(path.join(root, d), 0);
+  return ids;
+}
+
+/**
+ * Run the lint. opts: { root, reqs, scenarios, ledger (from `sdd accept`, optional), scope: Set | null, testPaths }.
+ * Returns { findings: [{ code, severity: error|warning, file, line, req?, ac?, message }], summary }.
+ */
+export function lintCaptures({ root, reqs, scenarios = [], ledger = null, scope = null, testPaths } = {}) {
+  const findings = [];
+  const { byScenario } = scenarioIndex(scenarios);
+  const reqF = new Set(reqs.filter((r) => r.type === "F" && !r.deprecated).map((r) => r.id));
+  const inScope = (id) => !scope || scope.has(id);
+  const known = knownIds(root);
+  const haveDocs = known.size > 0;
+  const files = testFiles(root, testPaths);
+  let captureCalls = 0;
+  for (const f of files) {
+    let text;
+    try { text = readFileSync(f.abs, "utf8"); } catch { continue; }
+    const { code } = splitComments(text, f.rel);
+    // C-04: ids cited in the test file that the documents do not know
+    if (haveDocs) {
+      const seen = new Set();
+      for (const m of code.matchAll(ID_RE)) {
+        const id = m[1];
+        if (seen.has(id) || known.has(id)) continue;
+        seen.add(id);
+        findings.push({ code: "C-04", severity: "warning", file: f.rel, line: lineOf(code, m.index),
+          message: `${id} is cited here and exists nowhere in requirements/, spec/, plan/, design/ or ux/ (a typo, or an id renamed since)` });
+      }
+    }
+    if (!CAPTURE_CALL.test(code)) continue;
+    CAPTURE_CALL.lastIndex = 0;
+    for (const b of testBlocks(code)) {
+      const body = code.slice(b.start, b.end);
+      const title = testKeys(b.title);
+      const cites = new Set([...title.reqAcs.map((x) => `${x.req}#${x.ac}`),
+        ...title.scenarios.flatMap((s) => (byScenario.get(s) || []).map((t) => `${t.req}#${t.n}`))]);
+      let prev = 0;
+      for (const m of body.matchAll(CAPTURE_CALL)) {
+        captureCalls++;
+        const at = m.index;
+        const line = lineOf(code, b.start + at);
+        const call = body.slice(at, body.indexOf(")", at) > 0 ? Math.min(body.length, at + 400) : at + 1);
+        const id = captureId(body, at) || "";
+        const keys = testKeys(id);
+        const targets = [...keys.reqAcs.map((x) => ({ req: x.req, ac: x.ac })),
+          ...keys.scenarios.flatMap((s) => (byScenario.get(s) || []).map((t) => ({ req: t.req, ac: t.n, sid: s })))];
+        // C-01: the last API call before this capture (since the previous capture), with no on-screen assert after it
+        const seg = body.slice(prev, at);
+        const apis = [...seg.matchAll(API_CALL)];
+        if (apis.length && !(scope && targets[0] && !inScope(targets[0].req))) {
+          const last = apis[apis.length - 1];
+          const after = seg.slice(last.index);
+          const helperAsserts = /\bve\s*:\s*\[/.test(call.split(/\)\s*;/)[0]);
+          if (!LOCATOR_ASSERT.test(after.replace(API_CALL, "")) && !helperAsserts) {
+            findings.push({ code: "C-01", severity: "error", file: f.rel, line, ...(targets[0] ? { req: targets[0].req, ac: targets[0].ac } : {}),
+              message: `the capture${id ? ` "${id}"` : ""} comes right after an API check (line ${lineOf(code, b.start + prev + last.index)}) with no on-screen assertion in between: assert on the page what the criterion promises (or pass { ve: [...] } to the capture helper) before capturing` });
+          }
+        }
+        prev = at + 1;
+        // C-03 (static): the capture names a criterion that this test's title does not cite
+        for (const t of targets) {
+          if (!reqF.has(t.req) || !inScope(t.req) || t.ac < 1) continue;
+          if (!cites.has(`${t.req}#${t.ac}`))
+            findings.push({ code: "C-03", severity: "error", file: f.rel, line, req: t.req, ac: t.ac,
+              message: `the capture "${id}" of ${t.req} AC${t.ac} is taken inside the test "${b.title.slice(0, 80)}", whose title does not cite ${t.req} AC${t.ac}${t.sid ? ` (${t.sid})` : ""}: the ledger cannot tie the image to a test of the criterion (a test.step title does not count); move it to a test that cites the criterion` });
+        }
+      }
+    }
+  }
+  // From the ledger: captures taken by a test that does not cite the criterion; one image for many criteria
+  if (ledger) {
+    const byImage = new Map();
+    for (const r of ledger.requirements || []) {
+      if (r.type !== "F" || r.verdict === "DEPRECATED" || !inScope(r.id)) continue;
+      for (const c of r.criteria || []) {
+        for (const u of c.unbound_captures || [])
+          if (!findings.some((x) => x.code === "C-03" && x.req === r.id && x.ac === c.n))
+            findings.push({ code: "C-03", severity: "error", file: u.ref, line: 0, req: r.id, ac: c.n,
+              message: `${u.ref} is not counted for ${r.id} AC${c.n}: ${u.reason}` });
+        for (const p of c.shown_by || []) {
+          if (!byImage.has(p)) byImage.set(p, []);
+          byImage.get(p).push(`${r.id} AC${c.n}`);
+          const base = path.basename(p);
+          const ids = [...(c.scenarios || []), `${r.id}-AC${c.n}`];
+          const named = testKeys(base);
+          const namesOther = named.scenarios.length + named.reqAcs.length > 0
+            && !ids.some((id) => new RegExp(`(?:^|[^A-Za-z0-9])${id.split("-").join("[-_ ]")}(?!\\d)`, "i").test(base));
+          if (namesOther)
+            findings.push({ code: "C-02", severity: "warning", file: p, line: 0, req: r.id, ac: c.n,
+              message: `${p} shows ${r.id} AC${c.n} but is named after another criterion: capture this criterion's own screen` });
+        }
+      }
+    }
+    for (const [p, crits] of byImage) if (crits.length > 3)
+      findings.push({ code: "C-02", severity: "warning", file: p, line: 0,
+        message: `${p} is the only image of ${crits.length} criteria (${crits.slice(0, 6).join(", ")}${crits.length > 6 ? ", …" : ""}): one screen rarely shows that many promises; capture each criterion where its THEN is visible` });
+  }
+  const order = { "C-01": 1, "C-03": 2, "C-02": 3, "C-04": 4 };
+  findings.sort((a, b) => order[a.code] - order[b.code] || a.file.localeCompare(b.file) || a.line - b.line);
+  const count = (s) => findings.filter((x) => x.severity === s).length;
+  return { findings, summary: { test_files: files.length, capture_calls: captureCalls, errors: count("error"), warnings: count("warning") } };
+}
