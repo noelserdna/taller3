@@ -1,7 +1,7 @@
 {
   "$schema": "sdd-evidence-manifest-v1",
   "fase": 0,
-  "evaluated_sha": "6a2dc17ed60c29380035c57d381a75f6d3ddae9d",
+  "evaluated_sha": "0a85752b98d7d91f08ab6d2eb4cfa189f260dac0",
   "dirty": false,
   "evidence_dir": "evidencias",
   "note": "evidencias/ is not versioned: this manifest proves which files were seen (sha256); sdd accept pack bundles them",

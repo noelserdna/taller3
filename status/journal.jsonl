@@ -19,3 +19,4 @@
 {"at":"2026-11-15T23:26:20Z","feature":"initial","stage":"task-implementer","kind":"start","text":"Empezamos a construir la entrega 0: el taller completo con listas compartidas","refs":["FASE-0"]}
 {"at":"2026-11-15T23:33:25Z","feature":"initial","stage":"task-implementer","kind":"done","text":"La entrega 0 está construida y comprobada; lista para enseñártela","refs":["FASE-0"]}
 {"at":"2026-11-15T23:35:29Z","feature":"initial","stage":"acceptance","kind":"done","text":"Las 12 peticiones de la entrega 0 se pueden ver funcionando: 11 de 11 imprescindibles verificadas, con captura de cada criterio y vídeo de la demo.","refs":[]}
+{"at":"2026-11-15T23:40:16Z","feature":"initial","stage":"acceptance","kind":"done","text":"Ronda adversarial de la entrega 0: 2 observaciones abiertas (criterio de género con ejemplos que lo contradicen; prueba de textos en español demasiado débil). Las 25 capturas muestran lo que piden.","refs":[]}
