@@ -19,3 +19,15 @@
 - **Category:** TEST-POLICY
 - **Task:** TASK-F0-004
 - **Detail:** Por la política de pruebas (un test por criterio, al nivel más barato), `tests/ui.test.js` (jsdom) no se escribió: cada criterio de pantalla tiene su test en `tests/e2e/criterios.spec.js`, que es también donde se toma su captura. Las reglas del dominio se prueban en `tests/domain.test.js` sin citar el criterio, y `tests/api.test.js` prueba las rutas; REQ-F-009 se prueba solo con dos contextos de navegador.
+
+## Revisión independiente (Phase 9, 2b) — CODE-REVIEW
+Entradas para que una persona las encamine en la puerta de la FASE (no se corrigen aquí).
+
+- **IF-0-004** BLOCKER CODE-REVIEW, Task: n/a — `server.js:20`: `decodeURIComponent` lanza `URIError` con una ruta mal codificada (`/%E0%A4%A`) y tumba el proceso.
+- **IF-0-005** BLOCKER CODE-REVIEW, Task: n/a — `src/server/api.js:11`: con un cuerpo demasiado grande solo se rechaza la promesa; no se corta la petición ni se deja de acumular.
+- **IF-0-006** BLOCKER CODE-REVIEW, Task: n/a — `src/server/api.js:52-57`: sin captura de errores tras leer el cuerpo (disco lleno, JSON corrupto): la petición se queda colgada.
+- **IF-0-007** BLOCKER CODE-REVIEW, Task: n/a — `src/domain/taller.js:16`: sin límite de longitud de nombre ni de número de entradas.
+- **IF-0-008** BLOCKER CODE-REVIEW, Task: n/a — `src/server/store.js:17`: escritura en el sitio (sin fichero temporal + rename); un corte deja JSON truncado y la app no arranca.
+- **IF-0-009** BLOCKER CODE-REVIEW, Task: n/a — `src/ui/main.js:25,103`: `localStorage.setItem` sin protección y `resultado` nulo en un 400 rompen el repintado.
+- **IF-0-010** BLOCKER CODE-REVIEW, Task: n/a — `src/ui/main.js:17`: `pedir` no comprueba `ok` ni errores de red; página en blanco sin mensaje.
+- **IF-0-011** WARNING CODE-REVIEW, Task: n/a — `server.js:22`: `startsWith(dist)` sin separador final (endurecimiento).
