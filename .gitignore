@@ -4,3 +4,6 @@ data
 evidencias/**/*.webm
 test-results
 .sdd/junit
+pipeline-state.json
+.sdd/
+evidencias/
