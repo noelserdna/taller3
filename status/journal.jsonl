@@ -1,0 +1,3 @@
+{"at":"2026-11-15T23:14:21Z","feature":"initial","stage":"requirements-engineer","kind":"start","text":"Vamos a escuchar lo que necesitas y anotarlo con tus palabras","refs":[]}
+{"at":"2026-11-15T23:14:21Z","feature":"initial","stage":"requirements-engineer","kind":"change","text":"default-policy: 10 plazas iniciales y nombre recordado en el navegador (datos locales, sin servidor)","refs":[]}
+{"at":"2026-11-15T23:14:21Z","feature":"initial","stage":"requirements-engineer","kind":"done","text":"Convertimos tus 9 peticiones en 11 requisitos con ejemplos, listos para que los revises","refs":["N-001"]}
