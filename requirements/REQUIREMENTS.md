@@ -3,7 +3,9 @@
 > **Project:** taller3 — apuntarse a un taller de cerámica
 > **Version:** 1.0
 > **Last updated:** 2026-11-16 (revisión: datos compartidos)
-> **Status:** Review
+> **Status:** Approved
+> **Approved by:** Andres Leon (Cliente), 2026-11-16
+> **Ejemplos revisados por:** Andres Leon (Cliente), 2026-11-16
 > **Customer needs:** [CUSTOMER-NEEDS.md](CUSTOMER-NEEDS.md)
 
 ## Functional Requirements

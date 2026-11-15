@@ -6,7 +6,7 @@
       "id": "Q-requirements-engineer-001",
       "skill": "sdd-requirements-engineer",
       "contexto": "REQ-F-008",
-      "estado": "OPEN",
+      "estado": "ANSWERED",
       "pregunta": "When the organizer lowers plazas below the number of apuntados, what happens?",
       "para_cliente": "Si la organizadora reduce las plazas por debajo de las personas ya apuntadas, ¿qué debe pasar?",
       "opciones": [
@@ -27,13 +27,18 @@
         }
       ],
       "bloquea": "Requirements gate",
-      "respuesta": null
+      "respuesta": {
+        "letra": "A",
+        "como": "opción recomendada, aceptada por",
+        "quien": "Andres Leon (Cliente)",
+        "fecha": "2026-11-16"
+      }
     },
     {
       "id": "Q-requirements-engineer-002",
       "skill": "sdd-requirements-engineer",
       "contexto": "REQ-F-007",
-      "estado": "OPEN",
+      "estado": "ANSWERED",
       "pregunta": "Should the Organización section be protected (password) or open to everyone?",
       "para_cliente": "¿La parte de la organizadora debe pedir una contraseña, o basta con que esté en la misma web sin protección?",
       "opciones": [
@@ -54,7 +59,12 @@
         }
       ],
       "bloquea": "Requirements gate",
-      "respuesta": null
+      "respuesta": {
+        "letra": "A",
+        "como": "opción recomendada, aceptada por",
+        "quien": "Andres Leon (Cliente)",
+        "fecha": "2026-11-16"
+      }
     }
   ]
 }
