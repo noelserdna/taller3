@@ -22,6 +22,7 @@ describe('catálogo de textos', () => {
     for (const texto of textos) {
       const palabras = texto.match(/[\p{L}]+/gu) ?? [];
       const generadas = palabras.filter((p) => /(ado|ada|ido|ida)$/i.test(p) && !concuerdaConSustantivo.has(p.toLowerCase()));
+      // REQ-NF-001 AC1 cláusula: "none is found"
       expect(generadas, texto).toEqual([]);
       expect(texto, texto).not.toMatch(/\b\w+o\/a\b|\b\w+a\/o\b|@/i);
     }

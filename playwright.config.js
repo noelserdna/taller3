@@ -9,7 +9,7 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   reporter: [['list'], ['junit', { outputFile: '.sdd/junit/playwright.xml' }]],
-  outputDir: 'evidencias/.playwright',
+  outputDir: 'test-results',
   use: {
     baseURL: 'http://127.0.0.1:5173',
     screenshot: 'off',
