@@ -40,3 +40,9 @@
 ### N-009: Mensajes sin suponer género
 - **Quote:** "Los mensajes no deben suponer el género de la persona."
 - **Status:** captured
+
+### N-010: Las mismas listas para todo el mundo
+- **Quote:** "Todo el mundo tiene que ver las mismas listas: si alguien se apunta desde su móvil, la organizadora lo tiene que ver en el suyo. Los datos no pueden quedarse en cada navegador."
+- **Who:** cliente del taller — revisión de la propuesta de requisitos
+- **When:** 2026-11-16
+- **Status:** captured

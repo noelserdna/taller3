@@ -2,7 +2,7 @@
 
 > **Project:** taller3 — apuntarse a un taller de cerámica
 > **Version:** 1.0
-> **Last updated:** 2026-11-16
+> **Last updated:** 2026-11-16 (revisión: datos compartidos)
 > **Status:** Review
 > **Customer needs:** [CUSTOMER-NEEDS.md](CUSTOMER-NEEDS.md)
 
@@ -16,7 +16,7 @@
 - **Needs:** N-001
 - **Verification:** test
 - **Source:** intent/INT-001.md
-- **Rationale:** Es la pantalla en la que ocurre todo lo demás. El número inicial de plazas (10) es una decisión por defecto.
+- **Rationale:** Es la pantalla en la que ocurre todo lo demás (listas compartidas: REQ-F-009). El número inicial de plazas (10) es una decisión por defecto.
 - **Acceptance criteria:**
   - GIVEN a workshop with 10 plazas and nobody registered WHEN a person opens the page THEN the user sees the heading "Taller de cerámica" and "Apuntados (0 de 10 plazas)"
     - Se ve: "Taller de cerámica" y "Apuntados ({n} de {plazas} plazas)" en la página principal
@@ -101,7 +101,7 @@
 - **Needs:** N-006
 - **Verification:** test
 - **Source:** intent/INT-001.md
-- **Rationale:** El navegador recuerda el nombre usado al apuntarse; no hay cuentas ni avisos externos.
+- **Rationale:** Las listas son compartidas (REQ-F-009); solo el nombre usado al apuntarse se recuerda en el navegador de cada persona. No hay cuentas ni avisos externos.
 - **Acceptance criteria:**
   - GIVEN "Marta" and "Pablo" apuntados, "Lucía" puesto 1 who registered on this device WHEN "Pablo" is removed and "Lucía" reopens the page THEN the user sees "Plaza confirmada para Lucía" and "Apuntados (2 de 2 plazas)"
     - Se ve: "Plaza confirmada para {nombre}" y "Apuntados ({n} de {plazas} plazas)" en la página principal
@@ -149,6 +149,24 @@
     - Se ve: "Apuntados ({n} de {plazas} plazas)" en Organización
 - **Dependencies:** REQ-F-007
 
+### REQ-F-009: Las mismas listas en todos los dispositivos
+- **Statement:** WHEN any person or the organizer opens or reloads the page on any device THE system SHALL show the apuntados, the lista de espera and the number of plazas as last changed from any device
+- **Para el cliente:** Todo el mundo ve las mismas listas: si alguien se apunta desde su móvil, la organizadora lo ve en el suyo. Los datos no se quedan en cada navegador.
+- **Category:** Functional
+- **Priority:** Must have
+- **Needs:** N-010, N-007
+- **Verification:** test
+- **Source:** intent/INT-001.md, revisión del cliente
+- **Rationale:** Sin datos compartidos la organizadora no vería a quien se apunta desde otro dispositivo. Un test lo comprueba con dos clientes independientes (dos contextos de navegador sin almacenamiento común) contra la misma aplicación.
+- **Acceptance criteria:**
+  - GIVEN 2 plazas and nobody registered, and two separate browsers A and B WHEN "Marta" registers in browser A and browser B opens "Organización" THEN the user sees "1. Marta" in browser B
+    - Se ve: "{posicion}. {nombre}" en Organización
+  - GIVEN "Marta" and "Pablo" apuntados and "Lucía" registered in browser A on the waiting list WHEN the organizer in browser B sets "Plazas" to 3 and browser A reloads the page THEN the user sees "Apuntados (3 de 3 plazas)" and "3. Lucía" in browser A
+    - Se ve: "Apuntados ({n} de {plazas} plazas)" y "{posicion}. {nombre}" en la página principal
+  - GIVEN "Marta" apuntada from browser A WHEN browser B's local storage is empty and it opens the page THEN the user sees "Apuntados (1 de 2 plazas)" and the list keeps one single "Marta"
+    - Se ve: "Apuntados ({n} de {plazas} plazas)" en la página principal
+- **Dependencies:** REQ-F-002, REQ-F-007
+
 ## Nonfunctional Requirements
 
 ### REQ-NF-001: Mensajes sin suponer género
@@ -175,13 +193,13 @@
 - **Needs:** — (team/architecture source)
 - **Verification:** test — a static check reads the text catalog and compares it with the expected Spanish messages
 
-### REQ-C-002: Stack web con Vite y JavaScript, sin servidor ni red
-- **Statement:** The system SHALL be a Vite + JavaScript (ES modules) web app that stores its data in the browser and makes no network requests besides loading the page
-- **Para el cliente:** Funciona en el navegador, sin instalar nada y sin cuentas; los datos se guardan en el propio navegador.
+### REQ-C-002: Stack web con Vite y JavaScript, con datos compartidos propios
+- **Statement:** The system SHALL be a Vite + JavaScript (ES modules) web app whose shared data (apuntados, lista de espera, plazas) is kept by the application's own server, with no third-party online service, account or external database
+- **Para el cliente:** Es una web que se abre en el navegador, sin cuentas; los datos viven en el servidor de la propia aplicación y todos ven lo mismo.
 - **Type:** Technical
-- **Source:** AGENTS.md
-- **Needs:** N-001
-- **Verification:** test — a static check reads package.json (vite, vitest, no server dependency) and the source for fetch/XMLHttpRequest
+- **Source:** AGENTS.md, revisión del cliente
+- **Needs:** N-001, N-010
+- **Verification:** test — a static check reads package.json (vite, vitest) and the source, and fails if the shared data is read or written in localStorage/sessionStorage/IndexedDB or if any request goes to a host other than the application's own
 
 ## Traceability
 
@@ -195,6 +213,7 @@
 | REQ-F-006 | Functional | Must | INT-001 | N-006 | test | REQ-F-003, REQ-F-005 |
 | REQ-F-007 | Functional | Must | INT-001 | N-007 | test | REQ-F-002 |
 | REQ-F-008 | Functional | Must | INT-001 | N-008, N-006 | test | REQ-F-007 |
+| REQ-F-009 | Functional | Must | INT-001, revisión | N-010, N-007 | test | REQ-F-002, REQ-F-007 |
 | REQ-NF-001 | Nonfunctional | Must | INT-001 | N-009 | test | — |
 | REQ-C-001 | Constraint | — | AGENTS.md | — | test | — |
-| REQ-C-002 | Constraint | — | AGENTS.md | N-001 | test | — |
+| REQ-C-002 | Constraint | — | AGENTS.md, revisión | N-001, N-010 | test | — |
