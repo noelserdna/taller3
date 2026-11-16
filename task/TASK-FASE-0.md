@@ -7,7 +7,7 @@
 | Stream | Tasks | Owns (write-set) | Runs in |
 |--------|-------|------------------|---------|
 | base | TASK-F0-001 | package.json, vitest.config.js, playwright.config.js, index.html, server.js, README.md, .gitignore | main checkout, before worktrees (checkpoint `fase-0-foundation`) |
-| A | TASK-F0-002, TASK-F0-003, TASK-F0-004 | src/domain/**, src/server/**, src/ui/**, src/messages.js, vite.config.js, tests/*.test.js | worktree `feat/fase-0-a` |
+| A | TASK-F0-002, TASK-F0-003, TASK-F0-004, TASK-F0-006 | src/domain/**, src/server/**, src/ui/**, src/messages.js, vite.config.js, tests/*.test.js | worktree `feat/fase-0-a` |
 | integración | — | — | main checkout, after `--integrate --fase 0` |
 | verificación | TASK-F0-005 | tests/e2e/** | main checkout, Phase 9 |
 
@@ -84,3 +84,10 @@
     - Saves one screenshot per criterion to `evidencias/FASE-0/{REQ-F-NNN-ACn}.png` for each REQ-F scenario and the video of the run named `FASE-0` under `evidencias/FASE-0/`, attached to the test.
     - Verify: `npm run test:e2e` passes.
   - **Refs:** FASE-0, REQ-F-001, REQ-F-002, REQ-F-003, REQ-F-004, REQ-F-005, REQ-F-006, REQ-F-007, REQ-F-008, REQ-F-009, REQ-F-001 AC1, REQ-F-001 AC2, REQ-F-002 AC1, REQ-F-002 AC2, REQ-F-002 AC3, REQ-F-003 AC1, REQ-F-003 AC2, REQ-F-003 AC3, REQ-F-004 AC1, REQ-F-005 AC1, REQ-F-005 AC2, REQ-F-005 AC3, REQ-F-006 AC1, REQ-F-006 AC2, REQ-F-006 AC3, REQ-F-006 AC4, REQ-F-007 AC1, REQ-F-007 AC2, REQ-F-008 AC1, REQ-F-008 AC2, REQ-F-008 AC3, REQ-F-008 AC4, REQ-F-009 AC1, REQ-F-009 AC2, REQ-F-009 AC3
+
+## Acceptance fixes
+
+- [ ] TASK-F0-006 Catalog test asserts the whole REQ-C-001 AC1 text | `tests/messages.test.js`
+  - **Commit:** `test(messages): assert every interface text in Spanish for REQ-C-001 AC1`
+  - **Acceptance:** `REQ-C-001 AC1` compares all messages and all labels with the exact Spanish text and renders each message type. Source: ACCEPTANCE-ADVERSARIAL-FASE-0 (CH-002 WEAKENED-ASSERT).
+  - **Refs:** FASE-0, REQ-C-001
