@@ -1,11 +1,9 @@
 # Requirements Document
 
 > **Project:** taller3 — apuntarse a un taller de cerámica
-> **Version:** 1.0
+> **Version:** 1.1
 > **Last updated:** 2026-11-16 (revisión: datos compartidos)
-> **Status:** Approved
-> **Approved by:** Andres Leon (Cliente), 2026-11-16
-> **Ejemplos revisados por:** Andres Leon (Cliente), 2026-11-16
+> **Status:** Review
 > **Customer needs:** [CUSTOMER-NEEDS.md](CUSTOMER-NEEDS.md)
 
 ## Functional Requirements
@@ -180,7 +178,7 @@
 - **Verification:** test — metric: gendered words found in the text catalog, threshold 0, measured by a test that scans every message text for the listed gendered forms
 - **Metric:** 0 gendered forms in the message catalog
 - **Acceptance criteria:**
-  - GIVEN the full catalog of messages ("Plaza confirmada para Marta", "Álex, estás en la lista de espera en el puesto 2", "Baja registrada para Pablo") WHEN scanned for words ending in -ado/-ada/-ido/-ida and "o/a" forms THEN none is found
+  - GIVEN the full catalog of messages ("Plaza confirmada para Marta", "Álex, estás en la lista de espera en el puesto 2", "Baja registrada para Pablo") WHEN scanned for words ending in -ado/-ada/-ido/-ida and "o/a" forms, ignoring words that agree with a noun of the message ("confirmada" with "plaza", "registrada" with "baja") and not with the person THEN none is found
     - No visible: lo comprueba un test que lee el catálogo de textos
   - GIVEN the same messages for names "Marta" and "Pablo" WHEN rendered THEN the text around the name is identical
     - No visible: lo comprueba un test que compara los textos de dos nombres
