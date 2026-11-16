@@ -1,0 +1,1 @@
+/sdd-spec-auditor — Modo arnés (hermes-sdd): sin persona en la sesión; sigue references/modo-arnes.md del plugin. Audit spec/ (baseline audit), then Mode Fix only for defects whose fix is unambiguous.

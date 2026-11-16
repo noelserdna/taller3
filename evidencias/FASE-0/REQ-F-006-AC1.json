@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-006 AC1",
+ "test": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+ "titulo": "REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+ "ve": [
+  "Plaza confirmada para Lucía",
+  "Apuntados (2 de 2 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-006-AC1.png",
+ "sha256": "sha256:59a90007ae16d4863c3ea9f42ba1f894919bacc5e31810320d83eec3041950f8",
+ "at": "2026-11-16T00:03:38.076Z"
+}

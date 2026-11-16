@@ -1,0 +1,36 @@
+{
+  "id": "g17947886585848",
+  "tipo": "requisitos",
+  "fase": "",
+  "tablero": "taller3",
+  "tarjeta": "t_e9f851c9",
+  "adopcion": false,
+  "sha": "258e60b00412b4837befa008fd9b399aaf789e1f",
+  "creada": "2026-11-16T00:24:18Z",
+  "repo": "/Users/andresleon/proyectos-sdd/taller3",
+  "titulo": "Requisitos (cambio INT-002)",
+  "texto": "✏️ Cambio que piden las respuestas que eligió Andres Leon (Cliente) en la puerta «Entrega final» de «taller3»:\n• ¿Las palabras como «confirmada» o «registrada», que concuerdan con «plaza» o «baja» y no con la persona, están permitidas? → A) Sí, están permitidas; se aclara el criterio\n\nQué cambia (versión 1.1): los mismos requisitos, con ajustes:\n✏️ Mensajes sin suponer género: en el criterio «the full catalog of messages (\"Plaza confirmada para Marta\", \"Álex, estás en la lista de espera en el puesto 2\", \"Baja…» «forms» pasa a «forms, ignoring words that agree with a noun of the message (\"confirmada\" with…»\n\nSi lo apruebas, se ajusta lo afectado: una fase aún sin aceptar se rehace con los criterios nuevos; si ya estaba aceptada, se revisa el plan. Las fases aceptadas no se tocan.\n\n👉 Si es esto, pulsa ✅ Apruebo. Si falta o sobra algo, pulsa ✏️ y explícalo con tus palabras. Si algo de lo añadido te sobra, dilo ahí y se quita.\nAl aprobar, esta versión queda guardada como punto de partida, y confirmas que los ejemplos de cada criterio (nombres, fechas, horas, textos) son correctos: quedan firmados a tu nombre.",
+  "opciones": [
+    {
+      "verbo": "acepto",
+      "etiqueta": "✅ Apruebo"
+    },
+    {
+      "verbo": "cambios",
+      "etiqueta": "✏️ Falta o sobra algo",
+      "texto": true
+    }
+  ],
+  "demo": "",
+  "preguntas": [],
+  "preguntas_error": false,
+  "hallazgos": null,
+  "tests_editados": 0,
+  "bloqueo": false,
+  "unica": false,
+  "revisar": [],
+  "encargado": {
+    "avisos": [],
+    "graves": 0
+  }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="22" failures="0" errors="0" time="0.133709455">
+    <testsuite name="tests/api.test.js" timestamp="2026-11-16T00:18:34.723Z" hostname="runnervmccnms" tests="4" failures="0" errors="0" skipped="0" time="0.10058625">
+        <testcase classname="tests/api.test.js" name="API compartida &gt; GET /api/taller devuelve {plazas, apuntados, espera, resultado}" time="0.041993024">
+        </testcase>
+        <testcase classname="tests/api.test.js" name="API compartida &gt; apuntar confirma, manda a la espera con puesto y rechaza el nombre vacío con 400" time="0.027947213">
+        </testcase>
+        <testcase classname="tests/api.test.js" name="API compartida &gt; baja promociona y plazas valida con 400" time="0.021798606">
+        </testcase>
+        <testcase classname="tests/api.test.js" name="API compartida &gt; un cuerpo que no es JSON recibe 400 y una ruta desconocida 404" time="0.007022347">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/constraints.test.js" timestamp="2026-11-16T00:18:34.725Z" hostname="runnervmccnms" tests="1" failures="0" errors="0" skipped="0" time="0.006564256">
+        <testcase classname="tests/constraints.test.js" name="restricciones &gt; REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts" time="0.00405973">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/domain.test.js" timestamp="2026-11-16T00:18:34.725Z" hostname="runnervmccnms" tests="11" failures="0" errors="0" skipped="0" time="0.007676747">
+        <testcase classname="tests/domain.test.js" name="apuntar &gt; un nombre repetido (sin distinguir mayúsculas ni espacios) deja un solo &quot;Marta&quot;" time="0.002325831">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="apuntar &gt; repetir &quot;Lucía&quot; en la espera mantiene el puesto 1" time="0.000491504">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="apuntar &gt; con el taller lleno el puesto es el siguiente de la espera" time="0.000254658">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="apuntar &gt; un nombre en blanco no apunta a nadie y no cambia el estado" time="0.000275467">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="darDeBaja &gt; la baja de &quot;Álex&quot; deja en la espera solo a Lucía en el puesto 1" time="0.000298031">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="darDeBaja &gt; la baja de un apuntado promociona al primero de la espera y renumera" time="0.000352162">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="darDeBaja &gt; la baja es idempotente" time="0.000306266">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="cambiarPlazas &gt; ampliar a 3 promociona a &quot;Lucía&quot; a la tercera plaza" time="0.000338777">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="cambiarPlazas &gt; no se puede bajar de las personas apuntadas" time="0.000508215">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="cambiarPlazas &gt; &quot;abc&quot;, 0 y negativos se rechazan" time="0.000503266">
+        </testcase>
+        <testcase classname="tests/domain.test.js" name="cambiarPlazas &gt; el mismo valor no cambia nada" time="0.000137157">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/messages.test.js" timestamp="2026-11-16T00:18:34.728Z" hostname="runnervmccnms" tests="3" failures="0" errors="0" skipped="0" time="0.012714842">
+        <testcase classname="tests/messages.test.js" name="catálogo de textos &gt; REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona" time="0.005105986">
+        </testcase>
+        <testcase classname="tests/messages.test.js" name="catálogo de textos &gt; REQ-NF-001 AC2 el texto alrededor de &quot;Marta&quot; y de &quot;Pablo&quot; es idéntico" time="0.00132992">
+        </testcase>
+        <testcase classname="tests/messages.test.js" name="catálogo de textos &gt; REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español" time="0.004086377">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/store.test.js" timestamp="2026-11-16T00:18:34.729Z" hostname="runnervmccnms" tests="3" failures="0" errors="0" skipped="0" time="0.00616736">
+        <testcase classname="tests/store.test.js" name="store &gt; el estado inicial es de 10 plazas y listas vacías" time="0.002673404">
+        </testcase>
+        <testcase classname="tests/store.test.js" name="store &gt; TALLER_PLAZAS=2 fija 2 plazas iniciales" time="0.000926431">
+        </testcase>
+        <testcase classname="tests/store.test.js" name="store &gt; el estado se guarda en el fichero y se recarga" time="0.000801116">
+        </testcase>
+    </testsuite>
+</testsuites>

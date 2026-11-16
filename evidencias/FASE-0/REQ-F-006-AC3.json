@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-006 AC3",
+ "test": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+ "titulo": "REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+ "ve": [
+  "1. Álex",
+  "Lista de espera (1)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-006-AC3.png",
+ "sha256": "sha256:85d39311df45471f73282364d5b5f7f1505bbbf398087d73b3d9074ec6880b70",
+ "at": "2026-11-16T00:03:38.845Z"
+}

@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-009 AC2",
+ "test": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+ "titulo": "REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+ "ve": [
+  "Apuntados (3 de 3 plazas)",
+  "3. Lucía"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-009-AC2.png",
+ "sha256": "sha256:354d86db12edc1ba0b215884f610591935102e04b0299b7bdbb4f0363a4892fc",
+ "at": "2026-11-16T00:03:41.608Z"
+}

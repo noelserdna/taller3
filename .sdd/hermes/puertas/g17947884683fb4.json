@@ -1,0 +1,110 @@
+{
+  "id": "g17947884683fb4",
+  "tipo": "entrega",
+  "fase": "",
+  "tablero": "taller3",
+  "tarjeta": "t_4b9ca8ca",
+  "adopcion": false,
+  "sha": "a788fe6727ce024cce54eaf14924f28b735c2f4d",
+  "creada": "2026-11-16T00:21:08Z",
+  "repo": "/Users/andresleon/proyectos-sdd/taller3",
+  "titulo": "Entrega final",
+  "texto": "🧭 Encargado: 3 avisos (3 graves: Jev no puede aprobar esta puerta solo)\n‼️ REQ-F-001 AC1: sus tests ya fallan (criterios.spec.js)\n‼️ REQ-F-007 AC2: sus tests ya fallan (criterios.spec.js)\n‼️ REQ-F-008 AC3: sus tests ya fallan (criterios.spec.js)\n\n🎁 «taller3» está terminado y listo para entregar.\n\n✅ Todo en orden: los 12 requisitos funcionan y están comprobados.\n\n✅ 12 requisitos funcionan y están comprobados: Ver el taller y sus plazas; Apuntarse con el nombre cuando quedan plazas; Lista de espera con puesto cuando el taller está lleno; Rechazar nombre vacío; Darse de baja; Promoción automática desde la lista de espera; La organizadora ve apuntados y espera; La organizadora cambia el número de plazas; L…\n\n🧩 Se hizo en una sola fase: al aceptar la entrega aceptas también esa fase.\n\n🛡 No se ha tocado ningún test que ya existía (ni sus ayudas ni su configuración).\n\n🎬 Demo: vídeo y 25 capturas.\n\n👉 Pulsa ▶ Ver demo; después podrás aceptar la entrega, aceptarla con observaciones o rechazarla.\n\n❓ Antes, 2 preguntas (la recomendada ya está marcada en los botones Q):\n\n1. ¿Las palabras como «confirmada» o «registrada», que concuerdan con «plaza» o «baja» y no con la persona, están permitidas?\n   🔧 Detalle técnico: REQ-NF-001 AC1 says a scan for -ado/-ada/-ido/-ida and o/a forms finds none, but its own examples 'Plaza confirmada para Marta' and 'Baja registrada para Pablo…\n   A) Sí, están permitidas; se aclara el criterio  ⭐ recomendada  (📝 abre un cambio de requisitos)\n   B) No; se reescriben los mensajes\n\n2. Los mensajes «Plaza confirmada» y «Baja registrada» llevan una terminación femenina que concuerda con «plaza» y «baja», no con la persona: ¿está bien dejarlos tal cual?\n   🔧 Detalle técnico: REQ-NF-001 AC1 asks that no catalog word end in -ado/-ada/-ido/-ida, but its own examples and REQ-F-002/REQ-F-005 mandate \"Plaza confirmada para {nombre}\" and…\n   A) Keep the mandated texts; the scan skips confirmada and registrada because they modify plaza and baja (recommended)  ⭐ recomendada\n   B) Reword both messages without participles (for example \"Tu plaza queda confirmada\" is also gendered, so use \"Plaza asegurada\"-free phrasing agreed with the client)  (📝 abre un cambio de requisitos)\n\n👉 Si firmas sin tocar los botones Q, esto lanzará: 📝 abre un cambio de requisitos (antes de seguir te llega su puerta): Q1 · sin más efecto: Q2.",
+  "opciones": [
+    {
+      "verbo": "ver",
+      "etiqueta": "▶ Ver demo",
+      "paso": 1
+    },
+    {
+      "verbo": "acepto",
+      "etiqueta": "✅ Acepto la entrega",
+      "paso": 2
+    },
+    {
+      "verbo": "observaciones",
+      "etiqueta": "📝 Con observaciones",
+      "texto": true,
+      "paso": 2
+    },
+    {
+      "verbo": "rechazo",
+      "etiqueta": "❌ Rechazar",
+      "texto": true,
+      "paso": 2
+    }
+  ],
+  "demo": "evidencias/FASE-0/FASE-0-FASE-0-journey.webm",
+  "preguntas": [
+    {
+      "n": 1,
+      "id": "Q-acceptance-001",
+      "opciones": [
+        "A",
+        "B"
+      ],
+      "recomendada": "A",
+      "efectos": {
+        "A": {
+          "efecto": "req-change",
+          "ficheros": [],
+          "declarado": true
+        },
+        "B": {
+          "efecto": "ninguno",
+          "ficheros": [],
+          "declarado": true
+        }
+      },
+      "cliente": "¿Las palabras como «confirmada» o «registrada», que concuerdan con «plaza» o «baja» y no con la persona, están permitidas?"
+    },
+    {
+      "n": 2,
+      "id": "Q-task-implementer-001",
+      "opciones": [
+        "A",
+        "B"
+      ],
+      "recomendada": "A",
+      "efectos": {
+        "A": {
+          "efecto": "ninguno",
+          "ficheros": [],
+          "declarado": true
+        },
+        "B": {
+          "efecto": "req-change",
+          "ficheros": [],
+          "declarado": true
+        }
+      },
+      "cliente": "Los mensajes «Plaza confirmada» y «Baja registrada» llevan una terminación femenina que concuerda con «plaza» y «baja», no con la persona: ¿está bien dejarlos tal cual?"
+    }
+  ],
+  "preguntas_error": false,
+  "hallazgos": null,
+  "tests_editados": 0,
+  "bloqueo": false,
+  "unica": true,
+  "revisar": [],
+  "encargado": {
+    "avisos": [
+      {
+        "grave": true,
+        "codigo": "tests-rotos",
+        "texto": "REQ-F-001 AC1: sus tests ya fallan (criterios.spec.js)"
+      },
+      {
+        "grave": true,
+        "codigo": "tests-rotos",
+        "texto": "REQ-F-007 AC2: sus tests ya fallan (criterios.spec.js)"
+      },
+      {
+        "grave": true,
+        "codigo": "tests-rotos",
+        "texto": "REQ-F-008 AC3: sus tests ya fallan (criterios.spec.js)"
+      }
+    ],
+    "graves": 3
+  }
+}

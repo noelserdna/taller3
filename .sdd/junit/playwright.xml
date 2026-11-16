@@ -1,0 +1,290 @@
+<testsuites id="" name="" tests="26" failures="0" skipped="0" errors="0" time="10.650381000000001">
+<testsuite name="criterios.spec.js" timestamp="2026-11-16T00:03:33.524Z" hostname="" tests="25" failures="0" skipped="0" time="7.57" errors="0">
+<testcase name="Participante › REQ-F-001 AC1 portada con título y apuntados" classname="criterios.spec.js" time="0.3">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/REQ-F-001-AC1-ec66e778dc0057d4fde463f5a54e503db140eb38.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt-b9d30327b166473d25083d712faf258bce67597d.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-001 AC2 portada con lista de espera" classname="criterios.spec.js" time="0.201">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/REQ-F-001-AC2-06db293cc551f41b25f2a50a28a363f79a836530.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper-b72fe5359351e87636450278f0662b10371d2942.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-002 AC1 Marta confirma su plaza" classname="criterios.spec.js" time="0.267">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/REQ-F-002-AC1-0fb838ef855ba429114011645b2b9de27e5bb8aa.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza-bc929eb26c790e6741759cd69b25aed0b58797a1.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-002 AC2 Pablo confirma su plaza" classname="criterios.spec.js" time="0.275">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/REQ-F-002-AC2-29ed2c03cbc6b5e81bdb6eee8a66ee6e4228fd99.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza-c2e4748cb1cc3aeee7e574ca7d3f95874a8b80f7.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-002 AC3 Marta repetida no se duplica" classname="criterios.spec.js" time="0.293">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/REQ-F-002-AC3-ccf1de9c24b5fe8affb255673fc8bcf5e13647c3.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli-eb5900d04b0cbbd1142d53ca62582cb229fc5bc3.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1" classname="criterios.spec.js" time="0.274">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/REQ-F-003-AC1-41eb5e3229e54809a743ec2972f6aa60c11a121e.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e-3101adb1d6504626e1756d8e801a2bd8eb7e3e3d.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2" classname="criterios.spec.js" time="0.294">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/REQ-F-003-AC2-af46df477fa401f34aa48b8bbea51d9c04bbee8c.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en-405a2ae4cca3c09dcbed873df3032d52bda1ce69.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1" classname="criterios.spec.js" time="0.299">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/REQ-F-003-AC3-8190e79b46a4110a2f46686bd0e5c4adb3c57b03.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su-76cbd2aa16214dec395523096015d7f2621babee.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie" classname="criterios.spec.js" time="0.292">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/REQ-F-004-AC1-40cc58e40ba6d5304ae1566e5e70e81375757f29.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu-717269f427011e7e826550c724ee5e0e5dd5b7ef.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-005 AC1 baja de Álex en la espera" classname="criterios.spec.js" time="0.274">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/REQ-F-005-AC1-260e1dec42cf05f5552312217174aeeb02498eaa.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera-b83ed78ce4e89ae84915a57dd5a94332672ba781.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-005 AC2 baja de Lucía renumera la espera" classname="criterios.spec.js" time="0.278">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/REQ-F-005-AC2-cafa3213bd3002e1560bfc699d5b1d9a6d561789.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la--db16dc7354ad22a9f3b67f8a9c394d9d82fde164.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada" classname="criterios.spec.js" time="0.315">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/REQ-F-005-AC3-eccff6c6bd0f503576bba348a2818bf440779727.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta--229f512a6fe7831163a70d00d869dea35bbc3c0e.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver" classname="criterios.spec.js" time="0.434">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/REQ-F-006-AC1-538e31e3cec07619ad60b804f10d0f8d2f431226.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma-8e64feaba16ca400410d41bc3168b7c89a5107a2.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver" classname="criterios.spec.js" time="0.475">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/REQ-F-006-AC2-dfffe271d556a30246106b567172944a8dc7bcbe.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad-de2882fa027909d35448f9d46fd4ba0d33fd3460.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre" classname="criterios.spec.js" time="0.272">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/REQ-F-006-AC3-3398ac748e7282ca270d026d02cd830269ec2eb3.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q-795e6eed4ce20e49e0739dd17bdea4c1e6b8c286.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas" classname="criterios.spec.js" time="0.304">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/REQ-F-006-AC4-291deaedcabe87beb81b7b508cc4f49bc960bcb4.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve-f650464073446149ee3c9370a2411e18e73df9d4.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden" classname="criterios.spec.js" time="0.206">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/REQ-F-007-AC1-2f95498c1a38d569ab082a58c0ff1a31037401b4.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad-2410e0cc2f8c91c62ecb074ed1ad3af26d3f31e9.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-007 AC2 sin nadie en espera" classname="criterios.spec.js" time="0.207">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/REQ-F-007-AC2-32d46cbbd06a3beaa9528301d7c4eee4781d44c0.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera-888363a0dc88dd082c10d287231a486e2f4b0e76.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía" classname="criterios.spec.js" time="0.275">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/REQ-F-008-AC1-90780f96ed5fc48ccc692b0b139344ef9c1cab6e.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci-086f3acffcd233de50597490e41aa7c38f9dfe4e.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas" classname="criterios.spec.js" time="0.294">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/REQ-F-008-AC2-5c18b63d1a06579436006c1ffa1b8ff803601f41.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de--199ece0fc332c32ff931d2be5e50ae91cdc116df.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-008 AC3 &quot;abc&quot; y 0 se rechazan" classname="criterios.spec.js" time="0.289">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/REQ-F-008-AC3-7ba117bb8d779c640818a19d6bc06d5573645d20.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan-bf55b98e9f46c7975e730590439124e9a4a04136.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada" classname="criterios.spec.js" time="0.312">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/REQ-F-008-AC4-b18509fea987ef2f1ce2c0519ed0b24fbf253d9e.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia-14c8643c4d2473aa892f9df47d07f97ee2aac8ac.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización" classname="criterios.spec.js" time="0.332">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/REQ-F-009-AC1-26ca75777910be0416f27791247fb15481f3f8a0.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en-cecccab5598ee2b1abf1114b000a5ca373ed9934.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada" classname="criterios.spec.js" time="0.47">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/REQ-F-009-AC2-18da14f68be377f95111f463eb4317a4e6a0ca83.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re-ee7faeb2eccc828e354ab2a4372392dbe6e2c008.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez" classname="criterios.spec.js" time="0.338">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/REQ-F-009-AC3-ea47151a9c0a5c73c7269769dc9ad3f44cfebabc.png]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc-4ed0842825004e20d83f7cfdfa1fc3dd2fae1a94.webm]]
+
+[[ATTACHMENT|../../test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="journey.spec.js" timestamp="2026-11-16T00:03:33.524Z" hostname="" tests="1" failures="0" skipped="0" time="1.065" errors="0">
+<testcase name="FASE-0 journey" classname="journey.spec.js" time="1.065">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/journey-FASE-0-journey/attachments/FASE-0-FASE-0-journey-0c09046d3ba2385dff06704d36c8279120da9ff1.webm]]
+
+[[ATTACHMENT|../../test-results/journey-FASE-0-journey/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-008 AC2",
+ "test": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+ "titulo": "REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+ "ve": [
+  "No se pueden reducir las plazas por debajo de 2 personas apuntadas",
+  "Apuntados (2 de 2 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-008-AC2.png",
+ "sha256": "sha256:5047f02691d2c340f63548fe058276febe1eb8915774dea4784443fa7a3c6a4a",
+ "at": "2026-11-16T00:03:40.176Z"
+}

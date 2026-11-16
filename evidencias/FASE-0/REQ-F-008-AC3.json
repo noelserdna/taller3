@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-008 AC3",
+ "test": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+ "titulo": "REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+ "ve": [
+  "Indica un número de plazas de 1 o más",
+  "Apuntados (0 de 2 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-008-AC3.png",
+ "sha256": "sha256:d97ffe6843f01735a2f237cfeaefc44d5d9a2d601e552a65d80d322a07098df8",
+ "at": "2026-11-16T00:03:40.478Z"
+}

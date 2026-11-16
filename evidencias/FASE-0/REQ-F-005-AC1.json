@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-005 AC1",
+ "test": "Participante › REQ-F-005 AC1 baja de Álex en la espera",
+ "titulo": "REQ-F-005 AC1 baja de Álex en la espera",
+ "ve": [
+  "Baja registrada para Álex",
+  "Lista de espera (1)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-005-AC1.png",
+ "sha256": "sha256:4f40e1cefae590f8dddea000228eedc4a5fc082afe01b526d196285c8f6aa064",
+ "at": "2026-11-16T00:03:37.027Z"
+}

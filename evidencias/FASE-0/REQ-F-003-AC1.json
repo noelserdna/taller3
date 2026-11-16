@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-003 AC1",
+ "test": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+ "titulo": "REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+ "ve": [
+  "Lucía, estás en la lista de espera en el puesto 1"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-003-AC1.png",
+ "sha256": "sha256:9c39570739e1de53cc995e0d6e6445e0edcd2554121fde404396b7a40e1f812b",
+ "at": "2026-11-16T00:03:35.827Z"
+}

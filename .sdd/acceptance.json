@@ -1,0 +1,4886 @@
+{
+  "$schema": "sdd-acceptance-v1",
+  "evaluated_sha": "a788fe6727ce024cce54eaf14924f28b735c2f4d",
+  "dirty": false,
+  "untracked_paths": [],
+  "generatedAt": "2026-11-16T00:22:31.630Z",
+  "scope": {
+    "fase": 0,
+    "requirements": [
+      "REQ-F-001",
+      "REQ-F-002",
+      "REQ-F-003",
+      "REQ-F-004",
+      "REQ-F-005",
+      "REQ-F-006",
+      "REQ-F-007",
+      "REQ-F-008",
+      "REQ-F-009",
+      "REQ-NF-001",
+      "REQ-C-001",
+      "REQ-C-002"
+    ],
+    "file": "plan/fases/FASE-0-SKELETON.md",
+    "from_header": true
+  },
+  "junit": [
+    {
+      "path": ".sdd/junit/junit.xml",
+      "cases": 22,
+      "fresh": true,
+      "stale_reason": null
+    },
+    {
+      "path": ".sdd/junit/playwright.xml",
+      "cases": 26,
+      "fresh": true,
+      "stale_reason": null
+    },
+    {
+      "path": ".sdd/junit/vitest.xml",
+      "cases": 22,
+      "fresh": true,
+      "stale_reason": null
+    }
+  ],
+  "junit_sha": null,
+  "spec_tests": false,
+  "visual_evidence": "required",
+  "evidence_dir": "evidencias",
+  "videos": {
+    "required": [
+      "FASE-0"
+    ],
+    "found": [
+      "evidencias/FASE-0/FASE-0-FASE-0-journey.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la-.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta-.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de-.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re.webm",
+      "evidencias/FASE-0/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc.webm"
+    ],
+    "missing": []
+  },
+  "criterion_video": "warn",
+  "literal_gate": "enforce",
+  "requirements": [
+    {
+      "id": "REQ-F-001",
+      "type": "F",
+      "title": "Ver el taller y sus plazas",
+      "priority": "Must",
+      "needs": [
+        "N-001"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:e1d0c73963653d7190531f63021fc0358a6474f639da6d212a3fdc97d817d7b3",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN a workshop with 10 plazas and nobody registered WHEN a person opens the page THEN the user sees the heading \"Taller de cerámica\" and \"Apuntados (0 de 10 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Taller de cerámica",
+                "template": false
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-001 AC1 portada con título y apuntados",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-001 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/REQ-F-001-AC1-ec66e778dc0057d4fde463f5a54e503db140eb38.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt-b9d30327b166473d25083d712faf258bce67597d.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-001 AC1",
+              "name": "Participante › REQ-F-001 AC1 portada con título y apuntados",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/REQ-F-001-AC1-ec66e778dc0057d4fde463f5a54e503db140eb38.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt-b9d30327b166473d25083d712faf258bce67597d.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-001-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-001-AC1.png",
+                  "sha256": "sha256:31e9f73fc7b8100a1ca6e08ff1cbc4968a3d94778c2b78a9f3eb026cb3a513fd",
+                  "bytes": 33228,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-001 AC1 portada con título y apuntados"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-001-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN a workshop with 10 plazas and nobody on the waiting list WHEN a person opens the page THEN the user sees \"Lista de espera (0)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-001 AC2 portada con lista de espera",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-001 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/REQ-F-001-AC2-06db293cc551f41b25f2a50a28a363f79a836530.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper-b72fe5359351e87636450278f0662b10371d2942.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-001 AC2",
+              "name": "Participante › REQ-F-001 AC2 portada con lista de espera",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/REQ-F-001-AC2-06db293cc551f41b25f2a50a28a363f79a836530.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper-b72fe5359351e87636450278f0662b10371d2942.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-001-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-001-AC2.png",
+                  "sha256": "sha256:f0234fdaa47d56fd556a49a030e0896d8e0bbefa96fbcaf4f0b833aa2591c60e",
+                  "bytes": 33368,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-001 AC2 portada con lista de espera"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-001-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 2,
+      "criteria_passing": 2,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-001 AC1",
+          "name": "Participante › REQ-F-001 AC1 portada con título y apuntados",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/REQ-F-001-AC1-ec66e778dc0057d4fde463f5a54e503db140eb38.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/attachments/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt-b9d30327b166473d25083d712faf258bce67597d.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-d48a0-tada-con-título-y-apuntados/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-001-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-001-AC1.png",
+              "sha256": "sha256:31e9f73fc7b8100a1ca6e08ff1cbc4968a3d94778c2b78a9f3eb026cb3a513fd",
+              "bytes": 33228,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-001 AC1 portada con título y apuntados"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-001 AC2",
+          "name": "Participante › REQ-F-001 AC2 portada con lista de espera",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/REQ-F-001-AC2-06db293cc551f41b25f2a50a28a363f79a836530.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/attachments/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper-b72fe5359351e87636450278f0662b10371d2942.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-f5fc5-portada-con-lista-de-espera/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-001-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-001-AC2.png",
+              "sha256": "sha256:f0234fdaa47d56fd556a49a030e0896d8e0bbefa96fbcaf4f0b833aa2591c60e",
+              "bytes": 33368,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-001 AC2 portada con lista de espera"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-002",
+      "type": "F",
+      "title": "Apuntarse con el nombre cuando quedan plazas",
+      "priority": "Must",
+      "needs": [
+        "N-002",
+        "N-003"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:dba33a68ec7e6a79eca9928bfb1522b082d68814b9ef95fea6082a4c1709d6ca",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN 2 plazas and nobody registered WHEN \"Marta\" writes \"Marta\" in \"Nombre\" and presses \"Apuntarme\" THEN the user sees \"Plaza confirmada para Marta\" and \"1. Marta\" in the apuntados",
+          "sees": {
+            "texts": [
+              {
+                "text": "Plaza confirmada para {nombre}",
+                "template": true
+              },
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-002 AC1 Marta confirma su plaza",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-002 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/REQ-F-002-AC1-0fb838ef855ba429114011645b2b9de27e5bb8aa.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza-bc929eb26c790e6741759cd69b25aed0b58797a1.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-002 AC1",
+              "name": "Participante › REQ-F-002 AC1 Marta confirma su plaza",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/REQ-F-002-AC1-0fb838ef855ba429114011645b2b9de27e5bb8aa.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza-bc929eb26c790e6741759cd69b25aed0b58797a1.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-002-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-002-AC1.png",
+                  "sha256": "sha256:64aeceac385152e76ef951fdfada906e36d94c89bc3c89cb89c6d310f6d4bc79",
+                  "bytes": 38058,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-002 AC1 Marta confirma su plaza"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-002-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN 2 plazas and \"Marta\" already apuntada WHEN \"Pablo\" writes \"Pablo\" and presses \"Apuntarme\" THEN the user sees \"Plaza confirmada para Pablo\" and \"Apuntados (2 de 2 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Plaza confirmada para {nombre}",
+                "template": true
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-002 AC2 Pablo confirma su plaza",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-002 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/REQ-F-002-AC2-29ed2c03cbc6b5e81bdb6eee8a66ee6e4228fd99.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza-c2e4748cb1cc3aeee7e574ca7d3f95874a8b80f7.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-002 AC2",
+              "name": "Participante › REQ-F-002 AC2 Pablo confirma su plaza",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/REQ-F-002-AC2-29ed2c03cbc6b5e81bdb6eee8a66ee6e4228fd99.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza-c2e4748cb1cc3aeee7e574ca7d3f95874a8b80f7.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-002-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-002-AC2.png",
+                  "sha256": "sha256:503df26295c623f0f1434434f737df58d6cb7d03b5c7d9b0676ddb5719667bd6",
+                  "bytes": 40977,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-002 AC2 Pablo confirma su plaza"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-002-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN \"Marta\" apuntada WHEN the form is submitted again with \"Marta\" THEN the user sees \"Apuntados (1 de 2 plazas)\" and the list keeps one single \"Marta\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              },
+              {
+                "text": "{nombre} ya está en el taller",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-002 AC3 Marta repetida no se duplica",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-002 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/REQ-F-002-AC3-ccf1de9c24b5fe8affb255673fc8bcf5e13647c3.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli-eb5900d04b0cbbd1142d53ca62582cb229fc5bc3.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-002 AC3",
+              "name": "Participante › REQ-F-002 AC3 Marta repetida no se duplica",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/REQ-F-002-AC3-ccf1de9c24b5fe8affb255673fc8bcf5e13647c3.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli-eb5900d04b0cbbd1142d53ca62582cb229fc5bc3.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-002-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-002-AC3.png",
+                  "sha256": "sha256:b07eb781f6772618c3600456123c96f5f6352f38c09fe890cdf1f051fc9c451b",
+                  "bytes": 37457,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-002 AC3 Marta repetida no se duplica"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-002-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 3,
+      "criteria_passing": 3,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-002 AC1",
+          "name": "Participante › REQ-F-002 AC1 Marta confirma su plaza",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/REQ-F-002-AC1-0fb838ef855ba429114011645b2b9de27e5bb8aa.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza-bc929eb26c790e6741759cd69b25aed0b58797a1.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC1-Marta-confirma-su-plaza/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-002-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-002-AC1.png",
+              "sha256": "sha256:64aeceac385152e76ef951fdfada906e36d94c89bc3c89cb89c6d310f6d4bc79",
+              "bytes": 38058,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-002 AC1 Marta confirma su plaza"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-002 AC2",
+          "name": "Participante › REQ-F-002 AC2 Pablo confirma su plaza",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/REQ-F-002-AC2-29ed2c03cbc6b5e81bdb6eee8a66ee6e4228fd99.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/attachments/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza-c2e4748cb1cc3aeee7e574ca7d3f95874a8b80f7.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-F-002-AC2-Pablo-confirma-su-plaza/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-002-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-002-AC2.png",
+              "sha256": "sha256:503df26295c623f0f1434434f737df58d6cb7d03b5c7d9b0676ddb5719667bd6",
+              "bytes": 40977,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-002 AC2 Pablo confirma su plaza"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-002 AC3",
+          "name": "Participante › REQ-F-002 AC3 Marta repetida no se duplica",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/REQ-F-002-AC3-ccf1de9c24b5fe8affb255673fc8bcf5e13647c3.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/attachments/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli-eb5900d04b0cbbd1142d53ca62582cb229fc5bc3.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b2b2e-arta-repetida-no-se-duplica/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-002-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-002-AC3.png",
+              "sha256": "sha256:b07eb781f6772618c3600456123c96f5f6352f38c09fe890cdf1f051fc9c451b",
+              "bytes": 37457,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-002 AC3 Marta repetida no se duplica"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-003",
+      "type": "F",
+      "title": "Lista de espera con puesto cuando el taller está lleno",
+      "priority": "Must",
+      "needs": [
+        "N-004"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:e4771b71819373bffe5a9c9b0568ea84a0a4a1d0edffb96591b79f01d3a7500b",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN 2 plazas filled by \"Marta\" and \"Pablo\" WHEN \"Lucía\" writes \"Lucía\" and presses \"Apuntarme\" THEN the user sees \"Lucía, estás en la lista de espera en el puesto 1\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-003 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/REQ-F-003-AC1-41eb5e3229e54809a743ec2972f6aa60c11a121e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e-3101adb1d6504626e1756d8e801a2bd8eb7e3e3d.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-003 AC1",
+              "name": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/REQ-F-003-AC1-41eb5e3229e54809a743ec2972f6aa60c11a121e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e-3101adb1d6504626e1756d8e801a2bd8eb7e3e3d.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-003-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-003-AC1.png",
+                  "sha256": "sha256:9c39570739e1de53cc995e0d6e6445e0edcd2554121fde404396b7a40e1f812b",
+                  "bytes": 42842,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-003-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN 2 plazas filled and \"Lucía\" at puesto 1 WHEN \"Álex\" writes \"Álex\" and presses \"Apuntarme\" THEN the user sees \"Álex, estás en la lista de espera en el puesto 2\" and \"Lista de espera (2)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                "template": true
+              },
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-003 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/REQ-F-003-AC2-af46df477fa401f34aa48b8bbea51d9c04bbee8c.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en-405a2ae4cca3c09dcbed873df3032d52bda1ce69.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-003 AC2",
+              "name": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/REQ-F-003-AC2-af46df477fa401f34aa48b8bbea51d9c04bbee8c.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en-405a2ae4cca3c09dcbed873df3032d52bda1ce69.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-003-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-003-AC2.png",
+                  "sha256": "sha256:13b0949133c49de9f75ba8ad30f358ffb6aa8ead47435df39aee19f9f37461f6",
+                  "bytes": 46475,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-003-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN \"Lucía\" at puesto 1 WHEN the form is submitted again with \"Lucía\" THEN the user sees \"Lucía ya está en el taller\" and the waiting list keeps one single \"Lucía\" at puesto 1",
+          "sees": {
+            "texts": [
+              {
+                "text": "{nombre} ya está en el taller",
+                "template": true
+              },
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-003 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/REQ-F-003-AC3-8190e79b46a4110a2f46686bd0e5c4adb3c57b03.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su-76cbd2aa16214dec395523096015d7f2621babee.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-003 AC3",
+              "name": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/REQ-F-003-AC3-8190e79b46a4110a2f46686bd0e5c4adb3c57b03.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su-76cbd2aa16214dec395523096015d7f2621babee.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-003-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-003-AC3.png",
+                  "sha256": "sha256:55e01fc0003c79da9da724ded3d3435c5086fda1b1e89de3ecad4d5fb182f019",
+                  "bytes": 41294,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-003-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 3,
+      "criteria_passing": 3,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-003 AC1",
+          "name": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/REQ-F-003-AC1-41eb5e3229e54809a743ec2972f6aa60c11a121e.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/attachments/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e-3101adb1d6504626e1756d8e801a2bd8eb7e3e3d.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-dbf52-en-la-espera-en-el-puesto-1/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-003-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-003-AC1.png",
+              "sha256": "sha256:9c39570739e1de53cc995e0d6e6445e0edcd2554121fde404396b7a40e1f812b",
+              "bytes": 42842,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-003 AC2",
+          "name": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/REQ-F-003-AC2-af46df477fa401f34aa48b8bbea51d9c04bbee8c.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/attachments/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en-405a2ae4cca3c09dcbed873df3032d52bda1ce69.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6a42a-en-la-espera-en-el-puesto-2/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-003-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-003-AC2.png",
+              "sha256": "sha256:13b0949133c49de9f75ba8ad30f358ffb6aa8ead47435df39aee19f9f37461f6",
+              "bytes": 46475,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-003 AC3",
+          "name": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/REQ-F-003-AC3-8190e79b46a4110a2f46686bd0e5c4adb3c57b03.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/attachments/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su-76cbd2aa16214dec395523096015d7f2621babee.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-a7fac-petida-conserva-su-puesto-1/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-003-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-003-AC3.png",
+              "sha256": "sha256:55e01fc0003c79da9da724ded3d3435c5086fda1b1e89de3ecad4d5fb182f019",
+              "bytes": 41294,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-004",
+      "type": "F",
+      "title": "Rechazar nombre vacío",
+      "priority": "Should",
+      "needs": [
+        "N-002"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:8a9cb9cb56a4a8dde7424279ecd7c1b3cf0eef2bee54707bc7c40f11df0b09ec",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN 2 plazas and \"Marta\" apuntada WHEN \"   \" is submitted as \"Nombre\" THEN the user sees \"Escribe un nombre para apuntarte\" and \"Apuntados (1 de 2 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Escribe un nombre para apuntarte",
+                "template": false
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-004 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/REQ-F-004-AC1-40cc58e40ba6d5304ae1566e5e70e81375757f29.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu-717269f427011e7e826550c724ee5e0e5dd5b7ef.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-004 AC1",
+              "name": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/REQ-F-004-AC1-40cc58e40ba6d5304ae1566e5e70e81375757f29.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu-717269f427011e7e826550c724ee5e0e5dd5b7ef.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-004-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-004-AC1.png",
+                  "sha256": "sha256:1b6a6657cae115bc379c45a59e0395b037e3cfee7146df30a95c87fa5daf4668",
+                  "bytes": 38204,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-004-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 1,
+      "criteria_passing": 1,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-004 AC1",
+          "name": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/REQ-F-004-AC1-40cc58e40ba6d5304ae1566e5e70e81375757f29.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/attachments/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu-717269f427011e7e826550c724ee5e0e5dd5b7ef.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-81f93-en-blanco-no-apunta-a-nadie/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-004-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-004-AC1.png",
+              "sha256": "sha256:1b6a6657cae115bc379c45a59e0395b037e3cfee7146df30a95c87fa5daf4668",
+              "bytes": 38204,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-005",
+      "type": "F",
+      "title": "Darse de baja",
+      "priority": "Must",
+      "needs": [
+        "N-005"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:a34980b83ed3bca121786de56177b25c964f938c0aae0fc8627997ad915d82ee",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" 1 and \"Álex\" 2 on the waiting list WHEN someone presses \"Darse de baja\" next to \"Álex\" THEN the user sees \"Baja registrada para Álex\" and \"Lista de espera (1)\" and \"Lucía\" stays at puesto 1",
+          "sees": {
+            "texts": [
+              {
+                "text": "Baja registrada para {nombre}",
+                "template": true
+              },
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-005 AC1 baja de Álex en la espera",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-005 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/REQ-F-005-AC1-260e1dec42cf05f5552312217174aeeb02498eaa.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera-b83ed78ce4e89ae84915a57dd5a94332672ba781.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-005 AC1",
+              "name": "Participante › REQ-F-005 AC1 baja de Álex en la espera",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/REQ-F-005-AC1-260e1dec42cf05f5552312217174aeeb02498eaa.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera-b83ed78ce4e89ae84915a57dd5a94332672ba781.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-005-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-005-AC1.png",
+                  "sha256": "sha256:4f40e1cefae590f8dddea000228eedc4a5fc082afe01b526d196285c8f6aa064",
+                  "bytes": 42037,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-005 AC1 baja de Álex en la espera"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-005-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN \"Lucía\" 1 and \"Álex\" 2 on the waiting list and the workshop full WHEN someone presses \"Darse de baja\" next to \"Lucía\" THEN the user sees \"Baja registrada para Lucía\" and \"Álex\" now at puesto 1",
+          "sees": {
+            "texts": [
+              {
+                "text": "Baja registrada para {nombre}",
+                "template": true
+              },
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-005 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/REQ-F-005-AC2-cafa3213bd3002e1560bfc699d5b1d9a6d561789.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la--db16dc7354ad22a9f3b67f8a9c394d9d82fde164.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-005 AC2",
+              "name": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/REQ-F-005-AC2-cafa3213bd3002e1560bfc699d5b1d9a6d561789.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la--db16dc7354ad22a9f3b67f8a9c394d9d82fde164.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-005-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-005-AC2.png",
+                  "sha256": "sha256:f34ba065439620d9b40f62521d0684afb4661dd0a0bc55e9c0f097b19fd3f189",
+                  "bytes": 42104,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-005-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la-.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN \"Marta\" was just removed from 2 apuntados and 2 plazas WHEN the page is reloaded and the removal is requested again for \"Marta\" THEN the user sees \"Apuntados (1 de 2 plazas)\" and no \"Marta\" in any list",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-005 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/REQ-F-005-AC3-eccff6c6bd0f503576bba348a2818bf440779727.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta--229f512a6fe7831163a70d00d869dea35bbc3c0e.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-005 AC3",
+              "name": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/REQ-F-005-AC3-eccff6c6bd0f503576bba348a2818bf440779727.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta--229f512a6fe7831163a70d00d869dea35bbc3c0e.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-005-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-005-AC3.png",
+                  "sha256": "sha256:3087bf3664c2ffd3437f156e4e8916df81b18b7d6faeef40c87673839183abc7",
+                  "bytes": 35915,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-005-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta-.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 3,
+      "criteria_passing": 3,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-005 AC1",
+          "name": "Participante › REQ-F-005 AC1 baja de Álex en la espera",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/REQ-F-005-AC1-260e1dec42cf05f5552312217174aeeb02498eaa.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/attachments/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera-b83ed78ce4e89ae84915a57dd5a94332672ba781.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-91450-1-baja-de-Álex-en-la-espera/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-005-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-005-AC1.png",
+              "sha256": "sha256:4f40e1cefae590f8dddea000228eedc4a5fc082afe01b526d196285c8f6aa064",
+              "bytes": 42037,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-005 AC1 baja de Álex en la espera"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-005 AC2",
+          "name": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/REQ-F-005-AC2-cafa3213bd3002e1560bfc699d5b1d9a6d561789.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/attachments/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la--db16dc7354ad22a9f3b67f8a9c394d9d82fde164.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-589ae-de-Lucía-renumera-la-espera/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-005-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-005-AC2.png",
+              "sha256": "sha256:f34ba065439620d9b40f62521d0684afb4661dd0a0bc55e9c0f097b19fd3f189",
+              "bytes": 42104,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-005 AC3",
+          "name": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/REQ-F-005-AC3-eccff6c6bd0f503576bba348a2818bf440779727.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/attachments/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta--229f512a6fe7831163a70d00d869dea35bbc3c0e.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-ade3a-ida-de-Marta-no-cambia-nada/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-005-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-005-AC3.png",
+              "sha256": "sha256:3087bf3664c2ffd3437f156e4e8916df81b18b7d6faeef40c87673839183abc7",
+              "bytes": 35915,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-006",
+      "type": "F",
+      "title": "Promoción automática desde la lista de espera",
+      "priority": "Must",
+      "needs": [
+        "N-006"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:4811a276cd2ea9c709909a4021e04c9abc4fc719207a4525b13cff9a5e99956a",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN \"Marta\" and \"Pablo\" apuntados, \"Lucía\" puesto 1 who registered on this device WHEN \"Pablo\" is removed and \"Lucía\" reopens the page THEN the user sees \"Plaza confirmada para Lucía\" and \"Apuntados (2 de 2 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Plaza confirmada para {nombre}",
+                "template": true
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-006 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/REQ-F-006-AC1-538e31e3cec07619ad60b804f10d0f8d2f431226.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma-8e64feaba16ca400410d41bc3168b7c89a5107a2.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-006 AC1",
+              "name": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/REQ-F-006-AC1-538e31e3cec07619ad60b804f10d0f8d2f431226.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma-8e64feaba16ca400410d41bc3168b7c89a5107a2.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-006-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-006-AC1.png",
+                  "sha256": "sha256:59a90007ae16d4863c3ea9f42ba1f894919bacc5e31810320d83eec3041950f8",
+                  "bytes": 40650,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-006-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN \"Marta\" and \"Pablo\" apuntados, \"Álex\" puesto 1 who registered on this device WHEN \"Marta\" is removed and \"Álex\" reopens the page THEN the user sees \"Plaza confirmada para Álex\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Plaza confirmada para {nombre}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-006 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/REQ-F-006-AC2-dfffe271d556a30246106b567172944a8dc7bcbe.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad-de2882fa027909d35448f9d46fd4ba0d33fd3460.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-006 AC2",
+              "name": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/REQ-F-006-AC2-dfffe271d556a30246106b567172944a8dc7bcbe.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad-de2882fa027909d35448f9d46fd4ba0d33fd3460.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-006-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-006-AC2.png",
+                  "sha256": "sha256:3ebc7c71d0bf0942efae116eb4e35029c9f29a730197f815222475de139b517d",
+                  "bytes": 40977,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-006-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN \"Lucía\" puesto 1 and \"Álex\" puesto 2 WHEN an apuntado is removed THEN the user sees \"Álex\" now at puesto 1 and \"Lista de espera (1)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              },
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-006 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/REQ-F-006-AC3-3398ac748e7282ca270d026d02cd830269ec2eb3.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q-795e6eed4ce20e49e0739dd17bdea4c1e6b8c286.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-006 AC3",
+              "name": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/REQ-F-006-AC3-3398ac748e7282ca270d026d02cd830269ec2eb3.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q-795e6eed4ce20e49e0739dd17bdea4c1e6b8c286.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-006-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-006-AC3.png",
+                  "sha256": "sha256:85d39311df45471f73282364d5b5f7f1505bbbf398087d73b3d9074ec6880b70",
+                  "bytes": 42035,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-006-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 4,
+          "text": "GIVEN \"Lucía\" at puesto 2 who registered on this device WHEN she reopens the page without any removal THEN the user sees \"Lucía, estás en la lista de espera en el puesto 2\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-006 AC4",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/REQ-F-006-AC4-291deaedcabe87beb81b7b508cc4f49bc960bcb4.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve-f650464073446149ee3c9370a2411e18e73df9d4.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-006 AC4",
+              "name": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/REQ-F-006-AC4-291deaedcabe87beb81b7b508cc4f49bc960bcb4.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve-f650464073446149ee3c9370a2411e18e73df9d4.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-006-AC4.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-006-AC4.png",
+                  "sha256": "sha256:ea01c4b1f3834494ed2cf89cef5c0629ec696a92bb3f0ffea6e4c915be295519",
+                  "bytes": 46330,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-006-AC4.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 4,
+      "criteria_passing": 4,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-006 AC1",
+          "name": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/REQ-F-006-AC1-538e31e3cec07619ad60b804f10d0f8d2f431226.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma-8e64feaba16ca400410d41bc3168b7c89a5107a2.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-b620e--plaza-confirmada-al-volver/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-006-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-006-AC1.png",
+              "sha256": "sha256:59a90007ae16d4863c3ea9f42ba1f894919bacc5e31810320d83eec3041950f8",
+              "bytes": 40650,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-006 AC2",
+          "name": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/REQ-F-006-AC2-dfffe271d556a30246106b567172944a8dc7bcbe.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/attachments/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad-de2882fa027909d35448f9d46fd4ba0d33fd3460.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-965bc--plaza-confirmada-al-volver/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-006-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-006-AC2.png",
+              "sha256": "sha256:3ebc7c71d0bf0942efae116eb4e35029c9f29a730197f815222475de139b517d",
+              "bytes": 40977,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-006 AC3",
+          "name": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/REQ-F-006-AC3-3398ac748e7282ca270d026d02cd830269ec2eb3.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/attachments/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q-795e6eed4ce20e49e0739dd17bdea4c1e6b8c286.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-6d3cc-a-al-quedar-una-plaza-libre/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-006-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-006-AC3.png",
+              "sha256": "sha256:85d39311df45471f73282364d5b5f7f1505bbbf398087d73b3d9074ec6880b70",
+              "bytes": 42035,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre"
+        },
+        {
+          "ac": 4,
+          "kind": "test",
+          "ref": "REQ-F-006 AC4",
+          "name": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/REQ-F-006-AC4-291deaedcabe87beb81b7b508cc4f49bc960bcb4.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/attachments/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve-f650464073446149ee3c9370a2411e18e73df9d4.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Participante-REQ-aca55-2-lo-ve-al-volver-sin-bajas/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 4,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-006-AC4.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-006-AC4.png",
+              "sha256": "sha256:ea01c4b1f3834494ed2cf89cef5c0629ec696a92bb3f0ffea6e4c915be295519",
+              "bytes": 46330,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-007",
+      "type": "F",
+      "title": "La organizadora ve apuntados y espera",
+      "priority": "Must",
+      "needs": [
+        "N-007"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:a2e5c057b5e4a2a49ea66382e211474018bb3536b1ec3e600fdac1d8e13ba995",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" 1 and \"Álex\" 2 waiting WHEN the organizer opens \"Organización\" THEN the user sees \"1. Marta\", \"2. Pablo\" and \"1. Lucía\", \"2. Álex\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-007 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/REQ-F-007-AC1-2f95498c1a38d569ab082a58c0ff1a31037401b4.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad-2410e0cc2f8c91c62ecb074ed1ad3af26d3f31e9.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-007 AC1",
+              "name": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/REQ-F-007-AC1-2f95498c1a38d569ab082a58c0ff1a31037401b4.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad-2410e0cc2f8c91c62ecb074ed1ad3af26d3f31e9.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-007-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-007-AC1.png",
+                  "sha256": "sha256:8bf24e6342fce18d19bf5eeb2b4ca9f145c64dd0f6186139071a92bc72a0af98",
+                  "bytes": 43190,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-007-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN nobody waiting WHEN the organizer opens \"Organización\" THEN the user sees \"Nadie en la lista de espera\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Nadie en la lista de espera",
+                "template": false
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-007 AC2 sin nadie en espera",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-007 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/REQ-F-007-AC2-32d46cbbd06a3beaa9528301d7c4eee4781d44c0.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera-888363a0dc88dd082c10d287231a486e2f4b0e76.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-007 AC2",
+              "name": "Organización › REQ-F-007 AC2 sin nadie en espera",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/REQ-F-007-AC2-32d46cbbd06a3beaa9528301d7c4eee4781d44c0.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera-888363a0dc88dd082c10d287231a486e2f4b0e76.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-007-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-007-AC2.png",
+                  "sha256": "sha256:b327d1409719fdd311503f82d71cc8bf671759c9be6e32891f224883e3e820ed",
+                  "bytes": 36044,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-007 AC2 sin nadie en espera"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-007-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 2,
+      "criteria_passing": 2,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-007 AC1",
+          "name": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/REQ-F-007-AC1-2f95498c1a38d569ab082a58c0ff1a31037401b4.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/attachments/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad-2410e0cc2f8c91c62ecb074ed1ad3af26d3f31e9.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-10fb8-apuntados-y-espera-en-orden/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-007-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-007-AC1.png",
+              "sha256": "sha256:8bf24e6342fce18d19bf5eeb2b4ca9f145c64dd0f6186139071a92bc72a0af98",
+              "bytes": 43190,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-007 AC2",
+          "name": "Organización › REQ-F-007 AC2 sin nadie en espera",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/REQ-F-007-AC2-32d46cbbd06a3beaa9528301d7c4eee4781d44c0.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/attachments/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera-888363a0dc88dd082c10d287231a486e2f4b0e76.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-007-AC2-sin-nadie-en-espera/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-007-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-007-AC2.png",
+              "sha256": "sha256:b327d1409719fdd311503f82d71cc8bf671759c9be6e32891f224883e3e820ed",
+              "bytes": 36044,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-007 AC2 sin nadie en espera"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-008",
+      "type": "F",
+      "title": "La organizadora cambia el número de plazas",
+      "priority": "Must",
+      "needs": [
+        "N-008",
+        "N-006"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:df6b815cb8d01afc9d93290f243fde618fbf9f7679dcec4e8dbd8aa10f38d29e",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN 2 plazas full and \"Lucía\" 1, \"Álex\" 2 waiting WHEN the organizer sets \"Plazas\" to 3 and presses \"Cambiar plazas\" THEN the user sees \"Apuntados (3 de 3 plazas)\", \"3. Lucía\" and \"Lista de espera (1)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              },
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              },
+              {
+                "text": "Lista de espera ({n})",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-008 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/REQ-F-008-AC1-90780f96ed5fc48ccc692b0b139344ef9c1cab6e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci-086f3acffcd233de50597490e41aa7c38f9dfe4e.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-008 AC1",
+              "name": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/REQ-F-008-AC1-90780f96ed5fc48ccc692b0b139344ef9c1cab6e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci-086f3acffcd233de50597490e41aa7c38f9dfe4e.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-008-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-008-AC1.png",
+                  "sha256": "sha256:6da710d5e0a9634b3f603fac1a0b5635874792afd736c07e6b2a53c1852208b4",
+                  "bytes": 43263,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-008-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN 2 apuntados and 2 plazas WHEN the organizer sets \"Plazas\" to 1 THEN the user sees \"No se pueden reducir las plazas por debajo de 2 personas apuntadas\" and \"Apuntados (2 de 2 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "No se pueden reducir las plazas por debajo de {n} personas apuntadas",
+                "template": true
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-008 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/REQ-F-008-AC2-5c18b63d1a06579436006c1ffa1b8ff803601f41.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de--199ece0fc332c32ff931d2be5e50ae91cdc116df.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-008 AC2",
+              "name": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/REQ-F-008-AC2-5c18b63d1a06579436006c1ffa1b8ff803601f41.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de--199ece0fc332c32ff931d2be5e50ae91cdc116df.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-008-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-008-AC2.png",
+                  "sha256": "sha256:5047f02691d2c340f63548fe058276febe1eb8915774dea4784443fa7a3c6a4a",
+                  "bytes": 43527,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-008-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de-.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN 2 plazas WHEN the organizer sets \"Plazas\" to \"abc\" or 0 THEN the user sees \"Indica un número de plazas de 1 o más\" and \"Apuntados (0 de 2 plazas)\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Indica un número de plazas de 1 o más",
+                "template": false
+              },
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-008 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/REQ-F-008-AC3-7ba117bb8d779c640818a19d6bc06d5573645d20.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan-bf55b98e9f46c7975e730590439124e9a4a04136.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-008 AC3",
+              "name": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/REQ-F-008-AC3-7ba117bb8d779c640818a19d6bc06d5573645d20.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan-bf55b98e9f46c7975e730590439124e9a4a04136.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-008-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-008-AC3.png",
+                  "sha256": "sha256:d97ffe6843f01735a2f237cfeaefc44d5d9a2d601e552a65d80d322a07098df8",
+                  "bytes": 35830,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-008-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 4,
+          "text": "GIVEN plazas set to 3 WHEN the same value 3 is submitted again THEN the user sees \"Apuntados (3 de 3 plazas)\" and the lists do not change",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-008 AC4",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/REQ-F-008-AC4-b18509fea987ef2f1ce2c0519ed0b24fbf253d9e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia-14c8643c4d2473aa892f9df47d07f97ee2aac8ac.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-008 AC4",
+              "name": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/REQ-F-008-AC4-b18509fea987ef2f1ce2c0519ed0b24fbf253d9e.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia-14c8643c4d2473aa892f9df47d07f97ee2aac8ac.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-008-AC4.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-008-AC4.png",
+                  "sha256": "sha256:f9d025465aa6493bc7abe6a941b1770c98c2d3d33c1d5992221125b53b2b0d3e",
+                  "bytes": 43309,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-008-AC4.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 4,
+      "criteria_passing": 4,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-008 AC1",
+          "name": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/REQ-F-008-AC1-90780f96ed5fc48ccc692b0b139344ef9c1cab6e.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/attachments/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci-086f3acffcd233de50597490e41aa7c38f9dfe4e.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4df02-3-plazas-promociona-a-Lucía/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-008-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-008-AC1.png",
+              "sha256": "sha256:6da710d5e0a9634b3f603fac1a0b5635874792afd736c07e6b2a53c1852208b4",
+              "bytes": 43263,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-008 AC2",
+          "name": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/REQ-F-008-AC2-5c18b63d1a06579436006c1ffa1b8ff803601f41.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/attachments/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de--199ece0fc332c32ff931d2be5e50ae91cdc116df.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-4d943-s-de-las-personas-apuntadas/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-008-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-008-AC2.png",
+              "sha256": "sha256:5047f02691d2c340f63548fe058276febe1eb8915774dea4784443fa7a3c6a4a",
+              "bytes": 43527,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-008 AC3",
+          "name": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/REQ-F-008-AC3-7ba117bb8d779c640818a19d6bc06d5573645d20.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/attachments/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan-bf55b98e9f46c7975e730590439124e9a4a04136.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-F-008-AC3-abc-y-0-se-rechazan/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-008-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-008-AC3.png",
+              "sha256": "sha256:d97ffe6843f01735a2f237cfeaefc44d5d9a2d601e552a65d80d322a07098df8",
+              "bytes": 35830,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan"
+        },
+        {
+          "ac": 4,
+          "kind": "test",
+          "ref": "REQ-F-008 AC4",
+          "name": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/REQ-F-008-AC4-b18509fea987ef2f1ce2c0519ed0b24fbf253d9e.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/attachments/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia-14c8643c4d2473aa892f9df47d07f97ee2aac8ac.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Organización-REQ-5e778-tir-3-plazas-no-cambia-nada/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 4,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-008-AC4.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-008-AC4.png",
+              "sha256": "sha256:f9d025465aa6493bc7abe6a941b1770c98c2d3d33c1d5992221125b53b2b0d3e",
+              "bytes": 43309,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-F-009",
+      "type": "F",
+      "title": "Las mismas listas en todos los dispositivos",
+      "priority": "Must",
+      "needs": [
+        "N-010",
+        "N-007"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:64c6fd78d3103a843b652e01b88898d9bd89d3eb6ddcc7c735981aa925e3181d",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN 2 plazas and nobody registered, and two separate browsers A and B WHEN \"Marta\" registers in browser A and browser B opens \"Organización\" THEN the user sees \"1. Marta\" in browser B",
+          "sees": {
+            "texts": [
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              }
+            ],
+            "where": "Organización",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-009 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/REQ-F-009-AC1-26ca75777910be0416f27791247fb15481f3f8a0.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en-cecccab5598ee2b1abf1114b000a5ca373ed9934.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-009 AC1",
+              "name": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/REQ-F-009-AC1-26ca75777910be0416f27791247fb15481f3f8a0.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en-cecccab5598ee2b1abf1114b000a5ca373ed9934.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-009-AC1.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-009-AC1.png",
+                  "sha256": "sha256:ef99a4b234275db7300f51dcd93ecc24c5533a5d708c13c8227e33d3d4c98579",
+                  "bytes": 36024,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-009-AC1.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 2,
+          "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" registered in browser A on the waiting list WHEN the organizer in browser B sets \"Plazas\" to 3 and browser A reloads the page THEN the user sees \"Apuntados (3 de 3 plazas)\" and \"3. Lucía\" in browser A",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              },
+              {
+                "text": "{posicion}. {nombre}",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-009 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/REQ-F-009-AC2-18da14f68be377f95111f463eb4317a4e6a0ca83.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re-ee7faeb2eccc828e354ab2a4372392dbe6e2c008.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-009 AC2",
+              "name": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/REQ-F-009-AC2-18da14f68be377f95111f463eb4317a4e6a0ca83.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re-ee7faeb2eccc828e354ab2a4372392dbe6e2c008.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-009-AC2.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-009-AC2.png",
+                  "sha256": "sha256:354d86db12edc1ba0b215884f610591935102e04b0299b7bdbb4f0363a4892fc",
+                  "bytes": 44274,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-009-AC2.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re.webm"
+          ],
+          "video": "present"
+        },
+        {
+          "n": 3,
+          "text": "GIVEN \"Marta\" apuntada from browser A WHEN browser B's local storage is empty and it opens the page THEN the user sees \"Apuntados (1 de 2 plazas)\" and the list keeps one single \"Marta\"",
+          "sees": {
+            "texts": [
+              {
+                "text": "Apuntados ({n} de {plazas} plazas)",
+                "template": true
+              }
+            ],
+            "where": "la página principal",
+            "none": null
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+              "classname": "criterios.spec.js",
+              "file": "criterios.spec.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-F-009 AC3",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/playwright.xml",
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/REQ-F-009-AC3-ea47151a9c0a5c73c7269769dc9ad3f44cfebabc.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc-4ed0842825004e20d83f7cfdfa1fc3dd2fae1a94.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-F-009 AC3",
+              "name": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+              "status": "pass",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/REQ-F-009-AC3-ea47151a9c0a5c73c7269769dc9ad3f44cfebabc.png",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "image",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc-4ed0842825004e20d83f7cfdfa1fc3dd2fae1a94.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                },
+                {
+                  "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/video.webm",
+                  "sha256": null,
+                  "bytes": null,
+                  "kind": "video",
+                  "present": false
+                }
+              ]
+            },
+            {
+              "kind": "capture",
+              "ref": "evidencias/FASE-0/REQ-F-009-AC3.png",
+              "fresh": true,
+              "attachments": [
+                {
+                  "path": "evidencias/FASE-0/REQ-F-009-AC3.png",
+                  "sha256": "sha256:742be6a1fc2f019202cc5f21fbcb788949aa77a1ccb1a3313bce50587441e0b7",
+                  "bytes": 36115,
+                  "kind": "image",
+                  "present": true
+                }
+              ],
+              "binding": "sidecar",
+              "test": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez"
+            }
+          ],
+          "literal_gaps": [],
+          "shown_by": [
+            "evidencias/FASE-0/REQ-F-009-AC3.png"
+          ],
+          "visual": "shown",
+          "videos": [
+            "evidencias/FASE-0/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc.webm"
+          ],
+          "video": "present"
+        }
+      ],
+      "criteria_total": 3,
+      "criteria_passing": 3,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-F-009 AC1",
+          "name": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/REQ-F-009-AC1-26ca75777910be0416f27791247fb15481f3f8a0.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/attachments/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en-cecccab5598ee2b1abf1114b000a5ca373ed9934.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--36b0a-a-A-lo-ve-B-en-Organización/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 1,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-009-AC1.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-009-AC1.png",
+              "sha256": "sha256:ef99a4b234275db7300f51dcd93ecc24c5533a5d708c13c8227e33d3d4c98579",
+              "bytes": 36024,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización"
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-F-009 AC2",
+          "name": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/REQ-F-009-AC2-18da14f68be377f95111f463eb4317a4e6a0ca83.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/attachments/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re-ee7faeb2eccc828e354ab2a4372392dbe6e2c008.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--5e8d9-carga-y-ve-a-Lucía-apuntada/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 2,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-009-AC2.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-009-AC2.png",
+              "sha256": "sha256:354d86db12edc1ba0b215884f610591935102e04b0299b7bdbb4f0363a4892fc",
+              "bytes": 44274,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada"
+        },
+        {
+          "ac": 3,
+          "kind": "test",
+          "ref": "REQ-F-009 AC3",
+          "name": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+          "status": "pass",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/REQ-F-009-AC3-ea47151a9c0a5c73c7269769dc9ad3f44cfebabc.png",
+              "sha256": null,
+              "bytes": null,
+              "kind": "image",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/attachments/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc-4ed0842825004e20d83f7cfdfa1fc3dd2fae1a94.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            },
+            {
+              "path": "/Users/andresleon/test-results/criterios-Dos-navegadores--4d38b-les-ve-a-Marta-una-sola-vez/video.webm",
+              "sha256": null,
+              "bytes": null,
+              "kind": "video",
+              "present": false
+            }
+          ]
+        },
+        {
+          "ac": 3,
+          "kind": "capture",
+          "ref": "evidencias/FASE-0/REQ-F-009-AC3.png",
+          "fresh": true,
+          "attachments": [
+            {
+              "path": "evidencias/FASE-0/REQ-F-009-AC3.png",
+              "sha256": "sha256:742be6a1fc2f019202cc5f21fbcb788949aa77a1ccb1a3313bce50587441e0b7",
+              "bytes": 36115,
+              "kind": "image",
+              "present": true
+            }
+          ],
+          "binding": "sidecar",
+          "test": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez"
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    },
+    {
+      "id": "REQ-NF-001",
+      "type": "NF",
+      "title": "Mensajes sin suponer género",
+      "priority": "Must",
+      "needs": [
+        "N-009"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:3671d80de902bde7f385826c5b244f5fc6019d5b0521133ff45fe52db4cb3165",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": "GIVEN the full catalog of messages (\"Plaza confirmada para Marta\", \"Álex, estás en la lista de espera en el puesto 2\", \"Baja registrada para Pablo\") WHEN scanned for words ending in -ado/-ada/-ido/-ida and \"o/a\" forms THEN none is found",
+          "sees": {
+            "texts": [],
+            "where": null,
+            "none": "lo comprueba un test que lee el catálogo de textos"
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-NF-001 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/junit.xml",
+              "attachments": []
+            },
+            {
+              "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-NF-001 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/vitest.xml",
+              "attachments": []
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-NF-001 AC1",
+              "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            },
+            {
+              "kind": "test",
+              "ref": "REQ-NF-001 AC1",
+              "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            }
+          ],
+          "literal_gaps": []
+        },
+        {
+          "n": 2,
+          "text": "GIVEN the same messages for names \"Marta\" and \"Pablo\" WHEN rendered THEN the text around the name is identical",
+          "sees": {
+            "texts": [],
+            "where": null,
+            "none": "lo comprueba un test que compara los textos de dos nombres"
+          },
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-NF-001 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/junit.xml",
+              "attachments": []
+            },
+            {
+              "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-NF-001 AC2",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/vitest.xml",
+              "attachments": []
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-NF-001 AC2",
+              "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            },
+            {
+              "kind": "test",
+              "ref": "REQ-NF-001 AC2",
+              "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            }
+          ],
+          "literal_gaps": []
+        }
+      ],
+      "criteria_total": 2,
+      "criteria_passing": 2,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-NF-001 AC1",
+          "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        },
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-NF-001 AC1",
+          "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-NF-001 AC2",
+          "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        },
+        {
+          "ac": 2,
+          "kind": "test",
+          "ref": "REQ-NF-001 AC2",
+          "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": [
+        {
+          "id": "CH-001",
+          "ac": 1,
+          "category": "SPEC-QUESTION",
+          "counter": "confirmed",
+          "quote": "WHEN scanned for words ending in -ado/-ada/-ido/-ida and \"o/a\" forms THEN none is found",
+          "evidence": [
+            {
+              "path": "tests/messages.test.js",
+              "line": 17
+            },
+            {
+              "path": "tests/messages.test.js",
+              "line": 24
+            },
+            {
+              "path": "src/messages.js",
+              "line": 3
+            }
+          ],
+          "verifier": "verifier-FASE-0",
+          "head": "0a85752b98d7d91f08ab6d2eb4cfa189f260dac0",
+          "at": "2026-11-15T23:40:05.642Z",
+          "state": "stale",
+          "stale_reason": "cited code changed since 0a85752: tests/messages.test.js"
+        },
+        {
+          "id": "CH-003",
+          "ac": 1,
+          "category": "SPEC-QUESTION",
+          "counter": "confirmed",
+          "quote": "WHEN scanned for words ending in -ado/-ada/-ido/-ida and \"o/a\" forms THEN none is found",
+          "evidence": [
+            {
+              "path": "tests/messages.test.js",
+              "line": 30
+            },
+            {
+              "path": "tests/messages.test.js",
+              "line": 37
+            },
+            {
+              "path": "src/messages.js",
+              "line": 3
+            },
+            {
+              "path": "src/messages.js",
+              "line": 6
+            }
+          ],
+          "verifier": "verifier-FASE-0-recheck",
+          "head": "46547b45e3c73c632b8da7017a0eb25ab84f6bce",
+          "at": "2026-11-16T00:15:23.907Z",
+          "state": "dismissed",
+          "dismissal": {
+            "line": 1,
+            "by": "Andres Leon",
+            "role": "Cliente",
+            "reason": "CH-003: «Plaza confirmada» y «Baja registrada» concuerdan con «plaza» y «baja», no con la persona; los propios ejemplos del criterio lo usan así. No es un fallo de la web: es la frase del criterio, que se aclara aparte.",
+            "at": "2026-11-16T00:21:05.402Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "REQ-C-001",
+      "type": "C",
+      "title": "Textos de la interfaz en español",
+      "priority": "Must",
+      "needs": [],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:b6d3ed4b65e305bc67a18bfbb6248846ab7473c1e9b7fe91765723665cc57239",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": null,
+          "sees": null,
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-C-001 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/junit.xml",
+              "attachments": []
+            },
+            {
+              "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+              "classname": "tests/messages.test.js",
+              "file": "tests/messages.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-C-001 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/vitest.xml",
+              "attachments": []
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-C-001 AC1",
+              "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            },
+            {
+              "kind": "test",
+              "ref": "REQ-C-001 AC1",
+              "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            }
+          ],
+          "literal_gaps": []
+        }
+      ],
+      "criteria_total": 1,
+      "criteria_passing": 1,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-C-001 AC1",
+          "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        },
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-C-001 AC1",
+          "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": [
+        {
+          "id": "CH-002",
+          "ac": 1,
+          "category": "WEAKENED-ASSERT",
+          "counter": "confirmed",
+          "quote": "All interface texts SHALL be in Spanish",
+          "evidence": [
+            {
+              "path": "tests/messages.test.js",
+              "line": 45
+            },
+            {
+              "path": "tests/messages.test.js",
+              "line": 46
+            },
+            {
+              "path": "src/messages.js",
+              "line": 15
+            }
+          ],
+          "verifier": "verifier-FASE-0",
+          "head": "0a85752b98d7d91f08ab6d2eb4cfa189f260dac0",
+          "at": "2026-11-15T23:40:05.726Z",
+          "state": "stale",
+          "stale_reason": "cited code changed since 0a85752: tests/messages.test.js"
+        }
+      ]
+    },
+    {
+      "id": "REQ-C-002",
+      "type": "C",
+      "title": "Stack web con Vite y JavaScript, con datos compartidos propios",
+      "priority": "Must",
+      "needs": [
+        "N-001",
+        "N-010"
+      ],
+      "verification": "test",
+      "verification_raw": null,
+      "reqHash": "sha256:485919a1724b9066b3355845f0e3378b9a4a5ed312b1cb37c1887aa8093ab1e9",
+      "in_scope": true,
+      "verdict": "VERIFIED",
+      "reason": null,
+      "criteria": [
+        {
+          "n": 1,
+          "text": null,
+          "sees": null,
+          "scenarios": [],
+          "tests": [
+            {
+              "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+              "classname": "tests/constraints.test.js",
+              "file": "tests/constraints.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-C-002 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/junit.xml",
+              "attachments": []
+            },
+            {
+              "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+              "classname": "tests/constraints.test.js",
+              "file": "tests/constraints.test.js",
+              "status": "pass",
+              "message": null,
+              "via": "REQ-C-002 AC1",
+              "fresh": true,
+              "stale_reason": null,
+              "report": ".sdd/junit/vitest.xml",
+              "attachments": []
+            }
+          ],
+          "records": [],
+          "state": "pass",
+          "evidence": [
+            {
+              "kind": "test",
+              "ref": "REQ-C-002 AC1",
+              "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            },
+            {
+              "kind": "test",
+              "ref": "REQ-C-002 AC1",
+              "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+              "status": "pass",
+              "fresh": true,
+              "attachments": []
+            }
+          ],
+          "literal_gaps": []
+        }
+      ],
+      "criteria_total": 1,
+      "criteria_passing": 1,
+      "evidence": [
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-C-002 AC1",
+          "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        },
+        {
+          "ac": 1,
+          "kind": "test",
+          "ref": "REQ-C-002 AC1",
+          "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+          "status": "pass",
+          "fresh": true,
+          "attachments": []
+        }
+      ],
+      "waiver": null,
+      "stale_evidence": false,
+      "challenges": []
+    }
+  ],
+  "summary": {
+    "active": 12,
+    "deprecated": 0,
+    "by_verdict": {
+      "VERIFIED": 12,
+      "FAILING": 0,
+      "MISSING": 0,
+      "WAIVED": 0,
+      "DEPRECATED": 0
+    },
+    "by_priority": {
+      "Must": {
+        "total": 11,
+        "VERIFIED": 11,
+        "FAILING": 0,
+        "MISSING": 0,
+        "WAIVED": 0
+      },
+      "Should": {
+        "total": 1,
+        "VERIFIED": 1,
+        "FAILING": 0,
+        "MISSING": 0,
+        "WAIVED": 0
+      }
+    },
+    "must_total": 11,
+    "must_verified": 11,
+    "must_waived": 0,
+    "goal": true,
+    "waived_musts": [],
+    "stale_evidence": 0,
+    "challenges_open": 0,
+    "must_challenged": 0,
+    "challenged_musts": [],
+    "unshown": 0,
+    "literal_gaps": 0,
+    "weakened": 0,
+    "unbound_captures": 0,
+    "criteria_without_video": 0,
+    "missing_videos": [],
+    "stale_decisions": 0,
+    "junit_files": 3,
+    "junit_stale_files": 0
+  },
+  "fase_acceptances": [
+    {
+      "fase": 0,
+      "result": "observations",
+      "by": "Andres Leon",
+      "role": "Cliente",
+      "channel": "telegram:888584395 user:calb79 msg:851 taller3/t_4b9ca8ca gate:g17947884683fb4",
+      "head": "a788fe6727ce024cce54eaf14924f28b735c2f4d",
+      "at": "2026-11-16T00:22:31.422Z",
+      "demo": null,
+      "line": 2,
+      "stale": false,
+      "changed": [],
+      "attachments": []
+    }
+  ],
+  "stale_decisions": [],
+  "decision_errors": [],
+  "adversarial_gate": "enforce",
+  "challenge_errors": [],
+  "unknown_challenges": [],
+  "unknown_scenarios": [],
+  "unbound_tests": [],
+  "summary_all": {
+    "active": 12,
+    "deprecated": 0,
+    "by_verdict": {
+      "VERIFIED": 12,
+      "FAILING": 0,
+      "MISSING": 0,
+      "WAIVED": 0,
+      "DEPRECATED": 0
+    },
+    "by_priority": {
+      "Must": {
+        "total": 11,
+        "VERIFIED": 11,
+        "FAILING": 0,
+        "MISSING": 0,
+        "WAIVED": 0
+      },
+      "Should": {
+        "total": 1,
+        "VERIFIED": 1,
+        "FAILING": 0,
+        "MISSING": 0,
+        "WAIVED": 0
+      }
+    },
+    "must_total": 11,
+    "must_verified": 11,
+    "must_waived": 0,
+    "goal": true,
+    "waived_musts": [],
+    "stale_evidence": 0,
+    "challenges_open": 0,
+    "must_challenged": 0,
+    "challenged_musts": [],
+    "unshown": 0,
+    "literal_gaps": 0,
+    "weakened": 0,
+    "unbound_captures": 0,
+    "criteria_without_video": 0
+  },
+  "junit_searched": [
+    ".sdd/junit"
+  ]
+}

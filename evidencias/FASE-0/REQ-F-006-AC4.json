@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-006 AC4",
+ "test": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+ "titulo": "REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+ "ve": [
+  "Lucía, estás en la lista de espera en el puesto 2"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-006-AC4.png",
+ "sha256": "sha256:ea01c4b1f3834494ed2cf89cef5c0629ec696a92bb3f0ffea6e4c915be295519",
+ "at": "2026-11-16T00:03:39.159Z"
+}

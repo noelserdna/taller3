@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-001 AC2",
+ "test": "Participante › REQ-F-001 AC2 portada con lista de espera",
+ "titulo": "REQ-F-001 AC2 portada con lista de espera",
+ "ve": [
+  "Lista de espera (0)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-001-AC2.png",
+ "sha256": "sha256:f0234fdaa47d56fd556a49a030e0896d8e0bbefa96fbcaf4f0b833aa2591c60e",
+ "at": "2026-11-16T00:03:34.674Z"
+}

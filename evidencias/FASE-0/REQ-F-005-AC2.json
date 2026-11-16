@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-005 AC2",
+ "test": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera",
+ "titulo": "REQ-F-005 AC2 baja de Lucía renumera la espera",
+ "ve": [
+  "Baja registrada para Lucía",
+  "1. Álex"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-005-AC2.png",
+ "sha256": "sha256:f34ba065439620d9b40f62521d0684afb4661dd0a0bc55e9c0f097b19fd3f189",
+ "at": "2026-11-16T00:03:37.317Z"
+}

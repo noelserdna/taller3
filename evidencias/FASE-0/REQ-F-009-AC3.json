@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-009 AC3",
+ "test": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+ "titulo": "REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+ "ve": [
+  "Apuntados (1 de 2 plazas)",
+  "1. Marta"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-009-AC3.png",
+ "sha256": "sha256:742be6a1fc2f019202cc5f21fbcb788949aa77a1ccb1a3313bce50587441e0b7",
+ "at": "2026-11-16T00:03:41.958Z"
+}

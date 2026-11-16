@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-007 AC2",
+ "test": "Organización › REQ-F-007 AC2 sin nadie en espera",
+ "titulo": "REQ-F-007 AC2 sin nadie en espera",
+ "ve": [
+  "Nadie en la lista de espera"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-007-AC2.png",
+ "sha256": "sha256:b327d1409719fdd311503f82d71cc8bf671759c9be6e32891f224883e3e820ed",
+ "at": "2026-11-16T00:03:39.591Z"
+}

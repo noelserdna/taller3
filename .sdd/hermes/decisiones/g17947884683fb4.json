@@ -1,0 +1,14 @@
+{
+  "verbo": "observaciones",
+  "texto": "La acepto: funciona y hace lo que pedí. Que se aclare el criterio de los mensajes sin género («Plaza confirmada» y «Baja registrada» valen porque concuerdan con plaza y baja). Para la próxima versión, darle un aspecto cuidado.",
+  "actor": {
+    "persona": "yo",
+    "canal": "telegram",
+    "id": "888584395"
+  },
+  "prueba": {
+    "user": "calb79",
+    "msg": "851"
+  },
+  "at": "2026-11-16T00:22:10Z"
+}

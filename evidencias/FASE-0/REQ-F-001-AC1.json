@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-001 AC1",
+ "test": "Participante › REQ-F-001 AC1 portada con título y apuntados",
+ "titulo": "REQ-F-001 AC1 portada con título y apuntados",
+ "ve": [
+  "Taller de cerámica",
+  "Apuntados (0 de 10 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-001-AC1.png",
+ "sha256": "sha256:31e9f73fc7b8100a1ca6e08ff1cbc4968a3d94778c2b78a9f3eb026cb3a513fd",
+ "at": "2026-11-16T00:03:34.450Z"
+}

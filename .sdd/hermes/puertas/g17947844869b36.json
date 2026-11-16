@@ -1,0 +1,81 @@
+{
+  "id": "g17947844869b36",
+  "tipo": "requisitos",
+  "fase": "",
+  "tablero": "taller3",
+  "tarjeta": "t_8fd1547d",
+  "adopcion": false,
+  "sha": "89c41557bcd2ba6c4ea75b2ab2abdb1dd996fb93",
+  "creada": "2026-11-15T23:14:46Z",
+  "repo": "/Users/andresleon/proyectos-sdd/taller3",
+  "titulo": "Requisitos",
+  "texto": "📝 Esto es lo que vamos a construir para «taller3» (versión 1.0).\n\n🗣 Lo que pediste:\n«Una web para apuntarse a un taller de cerámica con plazas limitadas. Cada persona se apunta con su nombre. Si quedan plazas, queda apuntada y lo ve en pantalla; si el taller está lleno, entra en la lista de espera y ve en qué puesto está. Cualquiera puede darse de baja; cuando alguien apuntado se da de baja, el primero de la lista de espera pasa a apuntado y lo ve la próxima vez que entra. La organizadora ve la lista de apuntados y la de espera, y puede cambiar el número de plazas. Los mensajes…»\n\n✅ Sale de lo que pediste (8):\n• Al entrar ves el taller, cuántas plazas hay ocupadas y quién está apuntado o esperando.\n• Escribes tu nombre y, si hay sitio, ves enseguida que tu plaza está confirmada.\n• Si el taller está lleno, entras en la lista de espera y ves en qué puesto estás.\n• Cualquiera puede darse de baja, esté apuntado o esperando, y la lista se ajusta sola.\n• Si alguien se da de baja, la primera persona de la espera pasa a tener plaza y lo ve la próxima vez que entra.\n• La organizadora ve de un vistazo quién está apuntado y quién espera, en orden.\n• La organizadora puede cambiar las plazas; si las amplía, entran quienes esperaban, por orden.\n• Ningún mensaje da por hecho si la persona es hombre o mujer.\n\n➕ Lo añade el método, no lo pediste (1):\n• Si no escribes ningún nombre, no se apunta a nadie y se te avisa.\n\n🔧 Condiciones del proyecto (2):\n• Todo lo que se lee en la web está en español.\n• Funciona en el navegador, sin instalar nada y sin cuentas; los datos se guardan en el propio navegador.\n\n💬 Esto dirá la web (lo que leerá la gente, tal cual; lo que va entre llaves cambia en cada caso):\nEn la página principal:\n• «Taller de cerámica»\n• «Apuntados ({n} de {plazas} plazas)» (p. ej. «Apuntados (0 de 10 plazas)»); también en Organización\n• «Lista de espera ({n})» (p. ej. «Lista de espera (0)»); también en Organización\n• «Plaza confirmada para {nombre}» (p. ej. «Plaza confirmada para Marta»)\n• «{posicion}. {nombre}» (p. ej. «1. Marta»); también en Organización\n• «{nombre} ya está en el taller»\n• «{nombre}, estás en la lista de espera en el puesto {posicion}» (p. ej. «Lucía, estás en la lista de espera en el puesto 1»)\n• «Escribe un nombre para apuntarte»\n• «Baja registrada para {nombre}» (p. ej. «Baja registrada para Álex»)\nEn Organización:\n• «Nadie en la lista de espera»\n• «No se pueden reducir las plazas por debajo de {n} personas apuntadas» (p. ej. «No se pueden reducir las plazas por debajo de 2 personas apuntadas»)\n• «Indica un número de plazas de 1 o más»\n\n👉 Si es esto, pulsa ✅ Apruebo. Si falta o sobra algo, pulsa ✏️ y explícalo con tus palabras. Si algo de lo añadido te sobra, dilo ahí y se quita.\nAl aprobar, esta versión queda guardada como punto de partida, y confirmas que los ejemplos de cada criterio (nombres, fechas, horas, textos) son correctos: quedan firmados a tu nombre.\n\n❓ Antes, 2 preguntas (la recomendada ya está marcada en los botones Q):\n\n1. Si la organizadora reduce las plazas por debajo de las personas ya apuntadas, ¿qué debe pasar?\n   🔧 Detalle técnico: When the organizer lowers plazas below the number of apuntados, what happens?\n   A) Se avisa y no se cambia; nadie pierde su plaza  ⭐ recomendada\n   B) Las últimas personas apuntadas pasan a la lista de espera  (📝 abre un cambio de requisitos)\n\n2. ¿La parte de la organizadora debe pedir una contraseña, o basta con que esté en la misma web sin protección?\n   🔧 Detalle técnico: Should the Organización section be protected (password) or open to everyone?\n   A) Sin contraseña; cualquiera que sepa dónde está podría cambiar las plazas  ⭐ recomendada\n   B) Se añade una contraseña para la organizadora  (📝 abre un cambio de requisitos)\n\n👉 Si firmas sin tocar los botones Q, esto lanzará: sin más efecto: Q1, Q2.",
+  "opciones": [
+    {
+      "verbo": "acepto",
+      "etiqueta": "✅ Apruebo"
+    },
+    {
+      "verbo": "cambios",
+      "etiqueta": "✏️ Falta o sobra algo",
+      "texto": true
+    }
+  ],
+  "demo": "",
+  "preguntas": [
+    {
+      "n": 1,
+      "id": "Q-requirements-engineer-001",
+      "opciones": [
+        "A",
+        "B"
+      ],
+      "recomendada": "A",
+      "efectos": {
+        "A": {
+          "efecto": "ninguno",
+          "ficheros": [],
+          "declarado": true
+        },
+        "B": {
+          "efecto": "req-change",
+          "ficheros": [],
+          "declarado": true
+        }
+      },
+      "cliente": "Si la organizadora reduce las plazas por debajo de las personas ya apuntadas, ¿qué debe pasar?"
+    },
+    {
+      "n": 2,
+      "id": "Q-requirements-engineer-002",
+      "opciones": [
+        "A",
+        "B"
+      ],
+      "recomendada": "A",
+      "efectos": {
+        "A": {
+          "efecto": "ninguno",
+          "ficheros": [],
+          "declarado": true
+        },
+        "B": {
+          "efecto": "req-change",
+          "ficheros": [],
+          "declarado": true
+        }
+      },
+      "cliente": "¿La parte de la organizadora debe pedir una contraseña, o basta con que esté en la misma web sin protección?"
+    }
+  ],
+  "preguntas_error": false,
+  "hallazgos": null,
+  "tests_editados": 0,
+  "bloqueo": false,
+  "unica": false,
+  "revisar": [],
+  "encargado": {
+    "avisos": [],
+    "graves": 0
+  }
+}

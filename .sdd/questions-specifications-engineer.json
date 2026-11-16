@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "rol": "specifications-engineer",
+  "preguntas": [
+    {
+      "id": "Q-specifications-engineer-001",
+      "skill": "sdd-specifications-engineer",
+      "contexto": "NC-101 / REQ-F-006 (UC-001)",
+      "estado": "OPEN",
+      "pregunta": "REQ-F-006 says the promoted person is told 'Plaza confirmada para {nombre}' when next opening the page on the same device; it does not say whether the notice repeats on later openings. Specs currently leave NC-101 open.",
+      "para_cliente": "Cuando alguien pasa de la espera a apuntado y vuelve a entrar, ¿el aviso de plaza confirmada debe verse solo esa vez o cada vez que entre?",
+      "opciones": [
+        {
+          "letra": "A",
+          "texto": "Show the notice once (first opening after the promotion)",
+          "recomendada": true,
+          "efecto": "ninguno",
+          "ficheros": [],
+          "cliente": "El aviso sale una sola vez; después se ve la lista normal"
+        },
+        {
+          "letra": "B",
+          "texto": "Show it on every opening while the person stays apuntada",
+          "efecto": "req-change",
+          "ficheros": [],
+          "cliente": "El aviso sale siempre que entre"
+        }
+      ],
+      "bloquea": "NC-101 (spec/use-cases/UC-001-ver-el-taller.md)",
+      "respuesta": null
+    }
+  ]
+}

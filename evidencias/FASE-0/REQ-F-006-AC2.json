@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-006 AC2",
+ "test": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+ "titulo": "REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+ "ve": [
+  "Plaza confirmada para Álex"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-006-AC2.png",
+ "sha256": "sha256:3ebc7c71d0bf0942efae116eb4e35029c9f29a730197f815222475de139b517d",
+ "at": "2026-11-16T00:03:38.560Z"
+}

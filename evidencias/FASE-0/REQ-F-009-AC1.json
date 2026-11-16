@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-009 AC1",
+ "test": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+ "titulo": "REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+ "ve": [
+  "1. Marta"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-009-AC1.png",
+ "sha256": "sha256:ef99a4b234275db7300f51dcd93ecc24c5533a5d708c13c8227e33d3d4c98579",
+ "at": "2026-11-16T00:03:41.128Z"
+}

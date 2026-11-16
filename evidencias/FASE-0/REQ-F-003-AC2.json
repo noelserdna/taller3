@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-003 AC2",
+ "test": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+ "titulo": "REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+ "ve": [
+  "Álex, estás en la lista de espera en el puesto 2",
+  "Lista de espera (2)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-003-AC2.png",
+ "sha256": "sha256:13b0949133c49de9f75ba8ad30f358ffb6aa8ead47435df39aee19f9f37461f6",
+ "at": "2026-11-16T00:03:36.128Z"
+}

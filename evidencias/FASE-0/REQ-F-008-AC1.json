@@ -1,0 +1,14 @@
+{
+ "criterio": "REQ-F-008 AC1",
+ "test": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+ "titulo": "REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+ "ve": [
+  "Apuntados (3 de 3 plazas)",
+  "3. Lucía",
+  "Lista de espera (1)"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-008-AC1.png",
+ "sha256": "sha256:6da710d5e0a9634b3f603fac1a0b5635874792afd736c07e6b2a53c1852208b4",
+ "at": "2026-11-16T00:03:39.877Z"
+}

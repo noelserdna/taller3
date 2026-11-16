@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-002 AC1",
+ "test": "Participante › REQ-F-002 AC1 Marta confirma su plaza",
+ "titulo": "REQ-F-002 AC1 Marta confirma su plaza",
+ "ve": [
+  "Plaza confirmada para Marta",
+  "1. Marta"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-002-AC1.png",
+ "sha256": "sha256:64aeceac385152e76ef951fdfada906e36d94c89bc3c89cb89c6d310f6d4bc79",
+ "at": "2026-11-16T00:03:34.958Z"
+}

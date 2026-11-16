@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-004 AC1",
+ "test": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+ "titulo": "REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+ "ve": [
+  "Escribe un nombre para apuntarte",
+  "Apuntados (1 de 2 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-004-AC1.png",
+ "sha256": "sha256:1b6a6657cae115bc379c45a59e0395b037e3cfee7146df30a95c87fa5daf4668",
+ "at": "2026-11-16T00:03:36.742Z"
+}

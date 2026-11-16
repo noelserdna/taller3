@@ -1,0 +1,1353 @@
+{
+  "$schema": "sdd-adversarial-plan-v1",
+  "evaluated_sha": "46547b45e3c73c632b8da7017a0eb25ab84f6bce",
+  "dirty": false,
+  "generatedAt": "2026-11-16T00:04:14.430Z",
+  "scope": {
+    "fase": 0
+  },
+  "code_paths": [
+    "src"
+  ],
+  "adversarial_gate": "enforce",
+  "incremental": {
+    "since": "60f8eb824605556d978cc159f435db52f6d0c914",
+    "baseline": ".sdd/hermes/adversarial-FASE-0.json",
+    "changed_files": [
+      "tests/messages.test.js"
+    ],
+    "criteria": 29,
+    "recheck": 11,
+    "carried": 18
+  },
+  "fases": [
+    {
+      "fase": 0,
+      "file": "plan/fases/FASE-0-SKELETON.md",
+      "header": true,
+      "requirements": [
+        {
+          "id": "REQ-F-001",
+          "title": "Ver el taller y sus plazas",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN a person opens the page THE system SHALL show the workshop title, the number of plazas and the lists of apuntados and of lista de espera",
+          "reqHash": "sha256:e1d0c73963653d7190531f63021fc0358a6474f639da6d212a3fdc97d817d7b3",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN a workshop with 10 plazas and nobody registered WHEN a person opens the page THEN the user sees the heading \"Taller de cerámica\" and \"Apuntados (0 de 10 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-001 AC1 portada con título y apuntados",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-001-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-001-AC1.png": "sha256:31e9f73fc7b8100a1ca6e08ff1cbc4968a3d94778c2b78a9f3eb026cb3a513fd"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Taller de cerámica",
+                    "template": false
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-001-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-001-AC1-portada-con-t-tulo-y-apunt.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 2,
+              "text": "GIVEN a workshop with 10 plazas and nobody on the waiting list WHEN a person opens the page THEN the user sees \"Lista de espera (0)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-001 AC2 portada con lista de espera",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-001-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-001-AC2.png": "sha256:f0234fdaa47d56fd556a49a030e0896d8e0bbefa96fbcaf4f0b833aa2591c60e"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-001-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-001-AC2-portada-con-lista-de-esper.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-002",
+          "title": "Apuntarse con el nombre cuando quedan plazas",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN a person submits a name AND there are free plazas THE system SHALL add the name to the apuntados and tell that person that their plaza is confirmed",
+          "reqHash": "sha256:dba33a68ec7e6a79eca9928bfb1522b082d68814b9ef95fea6082a4c1709d6ca",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN 2 plazas and nobody registered WHEN \"Marta\" writes \"Marta\" in \"Nombre\" and presses \"Apuntarme\" THEN the user sees \"Plaza confirmada para Marta\" and \"1. Marta\" in the apuntados",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-002 AC1 Marta confirma su plaza",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-002-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-002-AC1.png": "sha256:64aeceac385152e76ef951fdfada906e36d94c89bc3c89cb89c6d310f6d4bc79"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Plaza confirmada para {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-002-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-002-AC1-Marta-confirma-su-plaza.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-002-AC1.png"
+              ]
+            },
+            {
+              "n": 2,
+              "text": "GIVEN 2 plazas and \"Marta\" already apuntada WHEN \"Pablo\" writes \"Pablo\" and presses \"Apuntarme\" THEN the user sees \"Plaza confirmada para Pablo\" and \"Apuntados (2 de 2 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-002 AC2 Pablo confirma su plaza",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-002-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-002-AC2.png": "sha256:503df26295c623f0f1434434f737df58d6cb7d03b5c7d9b0676ddb5719667bd6"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Plaza confirmada para {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-002-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-002-AC2-Pablo-confirma-su-plaza.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-002-AC2.png"
+              ]
+            },
+            {
+              "n": 3,
+              "text": "GIVEN \"Marta\" apuntada WHEN the form is submitted again with \"Marta\" THEN the user sees \"Apuntados (1 de 2 plazas)\" and the list keeps one single \"Marta\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-002 AC3 Marta repetida no se duplica",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-002-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-002-AC3.png": "sha256:b07eb781f6772618c3600456123c96f5f6352f38c09fe890cdf1f051fc9c451b"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  },
+                  {
+                    "text": "{nombre} ya está en el taller",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-002-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-002-AC3-Marta-repetida-no-se-dupli.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-002-AC3.png"
+              ]
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-003",
+          "title": "Lista de espera con puesto cuando el taller está lleno",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN a person submits a name AND there are no free plazas THE system SHALL add the name at the end of the lista de espera and tell that person their puesto",
+          "reqHash": "sha256:e4771b71819373bffe5a9c9b0568ea84a0a4a1d0edffb96591b79f01d3a7500b",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN 2 plazas filled by \"Marta\" and \"Pablo\" WHEN \"Lucía\" writes \"Lucía\" and presses \"Apuntarme\" THEN the user sees \"Lucía, estás en la lista de espera en el puesto 1\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-003 AC1 Lucía entra en la espera en el puesto 1",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-003-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-003-AC1.png": "sha256:9c39570739e1de53cc995e0d6e6445e0edcd2554121fde404396b7a40e1f812b"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-003-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-003-AC1-Luc-a-entra-en-la-espera-e.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 2,
+              "text": "GIVEN 2 plazas filled and \"Lucía\" at puesto 1 WHEN \"Álex\" writes \"Álex\" and presses \"Apuntarme\" THEN the user sees \"Álex, estás en la lista de espera en el puesto 2\" and \"Lista de espera (2)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-003 AC2 Álex entra en la espera en el puesto 2",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-003-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-003-AC2.png": "sha256:13b0949133c49de9f75ba8ad30f358ffb6aa8ead47435df39aee19f9f37461f6"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                    "template": true
+                  },
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-003-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-003-AC2-lex-entra-en-la-espera-en.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 3,
+              "text": "GIVEN \"Lucía\" at puesto 1 WHEN the form is submitted again with \"Lucía\" THEN the user sees \"Lucía ya está en el taller\" and the waiting list keeps one single \"Lucía\" at puesto 1",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-003-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-003-AC3.png": "sha256:55e01fc0003c79da9da724ded3d3435c5086fda1b1e89de3ecad4d5fb182f019"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{nombre} ya está en el taller",
+                    "template": true
+                  },
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-003-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-003-AC3-Luc-a-repetida-conserva-su.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-004",
+          "title": "Rechazar nombre vacío",
+          "priority": "Should",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "IF the submitted name is empty or only spaces THEN THE system SHALL not register anyone and SHALL show a message asking for a name",
+          "reqHash": "sha256:8a9cb9cb56a4a8dde7424279ecd7c1b3cf0eef2bee54707bc7c40f11df0b09ec",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN 2 plazas and \"Marta\" apuntada WHEN \"   \" is submitted as \"Nombre\" THEN the user sees \"Escribe un nombre para apuntarte\" and \"Apuntados (1 de 2 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-004 AC1 un nombre en blanco no apunta a nadie",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-004-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-004-AC1.png": "sha256:1b6a6657cae115bc379c45a59e0395b037e3cfee7146df30a95c87fa5daf4668"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Escribe un nombre para apuntarte",
+                    "template": false
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-004-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-004-AC1-un-nombre-en-blanco-no-apu.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-004-AC1.png"
+              ]
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-005",
+          "title": "Darse de baja",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN a person presses \"Darse de baja\" next to a name in apuntados or in lista de espera THE system SHALL remove that name and tell that the baja is registered, renumbering the lista de espera",
+          "reqHash": "sha256:a34980b83ed3bca121786de56177b25c964f938c0aae0fc8627997ad915d82ee",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" 1 and \"Álex\" 2 on the waiting list WHEN someone presses \"Darse de baja\" next to \"Álex\" THEN the user sees \"Baja registrada para Álex\" and \"Lista de espera (1)\" and \"Lucía\" stays at puesto 1",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-005 AC1 baja de Álex en la espera",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-005-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-005-AC1.png": "sha256:4f40e1cefae590f8dddea000228eedc4a5fc082afe01b526d196285c8f6aa064"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Baja registrada para {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-005-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-005-AC1-baja-de-lex-en-la-espera.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-005-AC1.png"
+              ]
+            },
+            {
+              "n": 2,
+              "text": "GIVEN \"Lucía\" 1 and \"Álex\" 2 on the waiting list and the workshop full WHEN someone presses \"Darse de baja\" next to \"Lucía\" THEN the user sees \"Baja registrada para Lucía\" and \"Álex\" now at puesto 1",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-005 AC2 baja de Lucía renumera la espera",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-005-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-005-AC2.png": "sha256:f34ba065439620d9b40f62521d0684afb4661dd0a0bc55e9c0f097b19fd3f189"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Baja registrada para {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-005-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-005-AC2-baja-de-Luc-a-renumera-la-.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 3,
+              "text": "GIVEN \"Marta\" was just removed from 2 apuntados and 2 plazas WHEN the page is reloaded and the removal is requested again for \"Marta\" THEN the user sees \"Apuntados (1 de 2 plazas)\" and no \"Marta\" in any list",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-005 AC3 la baja repetida de Marta no cambia nada",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-005-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-005-AC3.png": "sha256:3087bf3664c2ffd3437f156e4e8916df81b18b7d6faeef40c87673839183abc7"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-005-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-005-AC3-la-baja-repetida-de-Marta-.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-006",
+          "title": "Promoción automática desde la lista de espera",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN an apuntado person is removed THE system SHALL move the first person of the lista de espera to apuntados AND WHEN that person next opens the page on the same device THE system SHALL tell them their plaza is confirmed",
+          "reqHash": "sha256:4811a276cd2ea9c709909a4021e04c9abc4fc719207a4525b13cff9a5e99956a",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN \"Marta\" and \"Pablo\" apuntados, \"Lucía\" puesto 1 who registered on this device WHEN \"Pablo\" is removed and \"Lucía\" reopens the page THEN the user sees \"Plaza confirmada para Lucía\" and \"Apuntados (2 de 2 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-006 AC1 Lucía ve su plaza confirmada al volver",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-006-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-006-AC1.png": "sha256:59a90007ae16d4863c3ea9f42ba1f894919bacc5e31810320d83eec3041950f8"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Plaza confirmada para {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-006-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-006-AC1-Luc-a-ve-su-plaza-confirma.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 2,
+              "text": "GIVEN \"Marta\" and \"Pablo\" apuntados, \"Álex\" puesto 1 who registered on this device WHEN \"Marta\" is removed and \"Álex\" reopens the page THEN the user sees \"Plaza confirmada para Álex\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-006 AC2 Álex ve su plaza confirmada al volver",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-006-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-006-AC2.png": "sha256:3ebc7c71d0bf0942efae116eb4e35029c9f29a730197f815222475de139b517d"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Plaza confirmada para {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-006-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-006-AC2-lex-ve-su-plaza-confirmad.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 3,
+              "text": "GIVEN \"Lucía\" puesto 1 and \"Álex\" puesto 2 WHEN an apuntado is removed THEN the user sees \"Álex\" now at puesto 1 and \"Lista de espera (1)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-006 AC3 la espera se renumera al quedar una plaza libre",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-006-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-006-AC3.png": "sha256:85d39311df45471f73282364d5b5f7f1505bbbf398087d73b3d9074ec6880b70"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-006-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-006-AC3-la-espera-se-renumera-al-q.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 4,
+              "text": "GIVEN \"Lucía\" at puesto 2 who registered on this device WHEN she reopens the page without any removal THEN the user sees \"Lucía, estás en la lista de espera en el puesto 2\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Participante › REQ-F-006 AC4 Lucía en el puesto 2 lo ve al volver sin bajas",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-006-AC4.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-006-AC4.png": "sha256:ea01c4b1f3834494ed2cf89cef5c0629ec696a92bb3f0ffea6e4c915be295519"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{nombre}, estás en la lista de espera en el puesto {posicion}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-006-AC4.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-006-AC4-Luc-a-en-el-puesto-2-lo-ve.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-007",
+          "title": "La organizadora ve apuntados y espera",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN the organizer opens the \"Organización\" section THE system SHALL show the lista de apuntados and the lista de espera in order",
+          "reqHash": "sha256:a2e5c057b5e4a2a49ea66382e211474018bb3536b1ec3e600fdac1d8e13ba995",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" 1 and \"Álex\" 2 waiting WHEN the organizer opens \"Organización\" THEN the user sees \"1. Marta\", \"2. Pablo\" and \"1. Lucía\", \"2. Álex\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-007-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-007-AC1.png": "sha256:8bf24e6342fce18d19bf5eeb2b4ca9f145c64dd0f6186139071a92bc72a0af98"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-007-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-007-AC1-la-organizadora-ve-apuntad.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 2,
+              "text": "GIVEN nobody waiting WHEN the organizer opens \"Organización\" THEN the user sees \"Nadie en la lista de espera\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-007 AC2 sin nadie en espera",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-007-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-007-AC2.png": "sha256:b327d1409719fdd311503f82d71cc8bf671759c9be6e32891f224883e3e820ed"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Nadie en la lista de espera",
+                    "template": false
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-007-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-007-AC2-sin-nadie-en-espera.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-008",
+          "title": "La organizadora cambia el número de plazas",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN the organizer submits a new number of plazas THE system SHALL update the plazas AND, if there are more free plazas, move people from the lista de espera to apuntados in order",
+          "reqHash": "sha256:df6b815cb8d01afc9d93290f243fde618fbf9f7679dcec4e8dbd8aa10f38d29e",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN 2 plazas full and \"Lucía\" 1, \"Álex\" 2 waiting WHEN the organizer sets \"Plazas\" to 3 and presses \"Cambiar plazas\" THEN the user sees \"Apuntados (3 de 3 plazas)\", \"3. Lucía\" and \"Lista de espera (1)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-008 AC1 ampliar a 3 plazas promociona a Lucía",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-008-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-008-AC1.png": "sha256:6da710d5e0a9634b3f603fac1a0b5635874792afd736c07e6b2a53c1852208b4"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  },
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  },
+                  {
+                    "text": "Lista de espera ({n})",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-008-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-008-AC1-ampliar-a-3-plazas-promoci.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-008-AC1.png"
+              ]
+            },
+            {
+              "n": 2,
+              "text": "GIVEN 2 apuntados and 2 plazas WHEN the organizer sets \"Plazas\" to 1 THEN the user sees \"No se pueden reducir las plazas por debajo de 2 personas apuntadas\" and \"Apuntados (2 de 2 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-008 AC2 no se bajan las plazas de las personas apuntadas",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-008-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-008-AC2.png": "sha256:5047f02691d2c340f63548fe058276febe1eb8915774dea4784443fa7a3c6a4a"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "No se pueden reducir las plazas por debajo de {n} personas apuntadas",
+                    "template": true
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-008-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-008-AC2-no-se-bajan-las-plazas-de-.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-008-AC2.png"
+              ]
+            },
+            {
+              "n": 3,
+              "text": "GIVEN 2 plazas WHEN the organizer sets \"Plazas\" to \"abc\" or 0 THEN the user sees \"Indica un número de plazas de 1 o más\" and \"Apuntados (0 de 2 plazas)\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-008 AC3 \"abc\" y 0 se rechazan",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-008-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-008-AC3.png": "sha256:d97ffe6843f01735a2f237cfeaefc44d5d9a2d601e552a65d80d322a07098df8"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Indica un número de plazas de 1 o más",
+                    "template": false
+                  },
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-008-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-008-AC3-abc-y-0-se-rechazan.webm"
+              ],
+              "recheck": true,
+              "recheck_reasons": [
+                "capture changed: evidencias/FASE-0/REQ-F-008-AC3.png"
+              ]
+            },
+            {
+              "n": 4,
+              "text": "GIVEN plazas set to 3 WHEN the same value 3 is submitted again THEN the user sees \"Apuntados (3 de 3 plazas)\" and the lists do not change",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-008-AC4.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-008-AC4.png": "sha256:f9d025465aa6493bc7abe6a941b1770c98c2d3d33c1d5992221125b53b2b0d3e"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-008-AC4.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-008-AC4-repetir-3-plazas-no-cambia.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-F-009",
+          "title": "Las mismas listas en todos los dispositivos",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "WHEN any person or the organizer opens or reloads the page on any device THE system SHALL show the apuntados, the lista de espera and the number of plazas as last changed from any device",
+          "reqHash": "sha256:64c6fd78d3103a843b652e01b88898d9bd89d3eb6ddcc7c735981aa925e3181d",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN 2 plazas and nobody registered, and two separate browsers A and B WHEN \"Marta\" registers in browser A and browser B opens \"Organización\" THEN the user sees \"1. Marta\" in browser B",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Dos navegadores independientes › REQ-F-009 AC1 lo que apunta A lo ve B en Organización",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-009-AC1.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-009-AC1.png": "sha256:ef99a4b234275db7300f51dcd93ecc24c5533a5d708c13c8227e33d3d4c98579"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "Organización",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-009-AC1.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-009-AC1-lo-que-apunta-A-lo-ve-B-en.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 2,
+              "text": "GIVEN \"Marta\" and \"Pablo\" apuntados and \"Lucía\" registered in browser A on the waiting list WHEN the organizer in browser B sets \"Plazas\" to 3 and browser A reloads the page THEN the user sees \"Apuntados (3 de 3 plazas)\" and \"3. Lucía\" in browser A",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Dos navegadores independientes › REQ-F-009 AC2 B amplía las plazas y A recarga y ve a Lucía apuntada",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-009-AC2.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-009-AC2.png": "sha256:354d86db12edc1ba0b215884f610591935102e04b0299b7bdbb4f0363a4892fc"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  },
+                  {
+                    "text": "{posicion}. {nombre}",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-009-AC2.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-009-AC2-B-ampl-a-las-plazas-y-A-re.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            },
+            {
+              "n": 3,
+              "text": "GIVEN \"Marta\" apuntada from browser A WHEN browser B's local storage is empty and it opens the page THEN the user sees \"Apuntados (1 de 2 plazas)\" and the list keeps one single \"Marta\"",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "Dos navegadores independientes › REQ-F-009 AC3 un navegador sin datos locales ve a Marta una sola vez",
+                  "file": "criterios.spec.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [
+                "evidencias/FASE-0/REQ-F-009-AC3.png"
+              ],
+              "capture_sha256": {
+                "evidencias/FASE-0/REQ-F-009-AC3.png": "sha256:742be6a1fc2f019202cc5f21fbcb788949aa77a1ccb1a3313bce50587441e0b7"
+              },
+              "sees": {
+                "texts": [
+                  {
+                    "text": "Apuntados ({n} de {plazas} plazas)",
+                    "template": true
+                  }
+                ],
+                "where": "la página principal",
+                "none": null
+              },
+              "shown_by": [
+                "evidencias/FASE-0/REQ-F-009-AC3.png"
+              ],
+              "videos": [
+                "evidencias/FASE-0/FASE-0-REQ-F-009-AC3-un-navegador-sin-datos-loc.webm"
+              ],
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/server/api.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-NF-001",
+          "title": "Mensajes sin suponer género",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "THE system SHALL show every message without gendered participles or adjectives addressed to the person (for example \"apuntado/apuntada\", \"bienvenido/bienvenida\") and without \"o/a\" or \"@\" forms",
+          "reqHash": "sha256:3671d80de902bde7f385826c5b244f5fc6019d5b0521133ff45fe52db4cb3165",
+          "criteria": [
+            {
+              "n": 1,
+              "text": "GIVEN the full catalog of messages (\"Plaza confirmada para Marta\", \"Álex, estás en la lista de espera en el puesto 2\", \"Baja registrada para Pablo\") WHEN scanned for words ending in -ado/-ada/-ido/-ida and \"o/a\" forms THEN none is found",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "catálogo de textos > REQ-NF-001 AC1 ningún mensaje tiene formas de género hacia la persona",
+                  "file": "tests/messages.test.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [],
+              "capture_sha256": {},
+              "sees": {
+                "texts": [],
+                "where": null,
+                "none": "lo comprueba un test que lee el catálogo de textos"
+              },
+              "recheck": true,
+              "recheck_reasons": [
+                "challenge CH-001 stale",
+                "shared test code changed: tests/messages.test.js"
+              ]
+            },
+            {
+              "n": 2,
+              "text": "GIVEN the same messages for names \"Marta\" and \"Pablo\" WHEN rendered THEN the text around the name is identical",
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "catálogo de textos > REQ-NF-001 AC2 el texto alrededor de \"Marta\" y de \"Pablo\" es idéntico",
+                  "file": "tests/messages.test.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [],
+              "capture_sha256": {},
+              "sees": {
+                "texts": [],
+                "where": null,
+                "none": "lo comprueba un test que compara los textos de dos nombres"
+              },
+              "recheck": true,
+              "recheck_reasons": [
+                "shared test code changed: tests/messages.test.js"
+              ]
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-C-001",
+          "title": "Textos de la interfaz en español",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "All interface texts SHALL be in Spanish",
+          "reqHash": "sha256:b6d3ed4b65e305bc67a18bfbb6248846ab7473c1e9b7fe91765723665cc57239",
+          "criteria": [
+            {
+              "n": 1,
+              "text": null,
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "catálogo de textos > REQ-C-001 AC1 el catálogo es igual a los mensajes esperados en español",
+                  "file": "tests/messages.test.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [],
+              "capture_sha256": {},
+              "recheck": true,
+              "recheck_reasons": [
+                "challenge CH-002 stale",
+                "test changed: tests/messages.test.js"
+              ]
+            }
+          ],
+          "candidate_files": [
+            "src/domain/taller.js",
+            "src/messages.js",
+            "src/server/store.js"
+          ],
+          "challenges_open": []
+        },
+        {
+          "id": "REQ-C-002",
+          "title": "Stack web con Vite y JavaScript, con datos compartidos propios",
+          "priority": "Must",
+          "verification": "test",
+          "verdict": "VERIFIED",
+          "statement": "The system SHALL be a Vite + JavaScript (ES modules) web app whose shared data (apuntados, lista de espera, plazas) is kept by the application's own server, with no third-party online service, account or external database",
+          "reqHash": "sha256:485919a1724b9066b3355845f0e3378b9a4a5ed312b1cb37c1887aa8093ab1e9",
+          "criteria": [
+            {
+              "n": 1,
+              "text": null,
+              "scenarios": [],
+              "tests": [
+                {
+                  "name": "restricciones > REQ-C-002 AC1 Vite + Vitest, listas solo en el servidor y sin otros hosts",
+                  "file": "tests/constraints.test.js",
+                  "status": "pass",
+                  "fresh": true
+                }
+              ],
+              "captures": [],
+              "capture_sha256": {},
+              "recheck": false,
+              "recheck_reasons": []
+            }
+          ],
+          "candidate_files": [
+            "src/server/api.js",
+            "src/ui/main.js"
+          ],
+          "challenges_open": []
+        }
+      ],
+      "unknown_requirements": [],
+      "tasks": [
+        "TASK-F0-001",
+        "TASK-F0-002",
+        "TASK-F0-003",
+        "TASK-F0-004",
+        "TASK-F0-005",
+        "TASK-F0-006"
+      ],
+      "candidate_files": [
+        "src/domain/taller.js",
+        "src/messages.js",
+        "src/server/api.js",
+        "src/server/store.js",
+        "src/ui/main.js"
+      ],
+      "incremental": {
+        "criteria": 29,
+        "recheck": 11
+      }
+    }
+  ],
+  "uncovered": [],
+  "fases_without_header": [],
+  "criteria_without_test": [],
+  "coverage_gaps": 0
+}

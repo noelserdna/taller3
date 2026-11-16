@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-003 AC3",
+ "test": "Participante › REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+ "titulo": "REQ-F-003 AC3 Lucía repetida conserva su puesto 1",
+ "ve": [
+  "Lucía ya está en el taller",
+  "Lista de espera (1)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-003-AC3.png",
+ "sha256": "sha256:55e01fc0003c79da9da724ded3d3435c5086fda1b1e89de3ecad4d5fb182f019",
+ "at": "2026-11-16T00:03:36.441Z"
+}

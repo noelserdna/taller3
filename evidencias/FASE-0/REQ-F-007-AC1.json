@@ -1,0 +1,15 @@
+{
+ "criterio": "REQ-F-007 AC1",
+ "test": "Organización › REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+ "titulo": "REQ-F-007 AC1 la organizadora ve apuntados y espera en orden",
+ "ve": [
+  "1. Marta",
+  "2. Pablo",
+  "1. Lucía",
+  "2. Álex"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-007-AC1.png",
+ "sha256": "sha256:8bf24e6342fce18d19bf5eeb2b4ca9f145c64dd0f6186139071a92bc72a0af98",
+ "at": "2026-11-16T00:03:39.376Z"
+}

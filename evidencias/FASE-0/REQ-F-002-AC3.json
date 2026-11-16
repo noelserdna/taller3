@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-002 AC3",
+ "test": "Participante › REQ-F-002 AC3 Marta repetida no se duplica",
+ "titulo": "REQ-F-002 AC3 Marta repetida no se duplica",
+ "ve": [
+  "Apuntados (1 de 2 plazas)",
+  "Marta ya está en el taller"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-002-AC3.png",
+ "sha256": "sha256:b07eb781f6772618c3600456123c96f5f6352f38c09fe890cdf1f051fc9c451b",
+ "at": "2026-11-16T00:03:35.541Z"
+}

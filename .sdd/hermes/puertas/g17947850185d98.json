@@ -1,0 +1,36 @@
+{
+  "id": "g17947850185d98",
+  "tipo": "plan",
+  "fase": "",
+  "tablero": "taller3",
+  "tarjeta": "t_586b3cbc",
+  "adopcion": false,
+  "sha": "4a8ad6e2620166dfa47eac74b4378cb736bdf70d",
+  "creada": "2026-11-15T23:23:38Z",
+  "repo": "/Users/andresleon/proyectos-sdd/taller3",
+  "titulo": "Plan por fases",
+  "texto": "🗺 Plan de «taller3»: una sola fase.\n\n• FASE-0: Taller completo con listas compartidas (5 tareas)\n\nSe programa y se prueba de una vez, y te llega con su demo en la entrega final: ahí la aceptas (no hay una puerta aparte para la fase).\n\n👉 Si te parece bien, pulsa ✅ Conforme. Nada se programa hasta entonces.",
+  "opciones": [
+    {
+      "verbo": "conforme",
+      "etiqueta": "✅ Conforme"
+    },
+    {
+      "verbo": "cambios",
+      "etiqueta": "✏️ Cambiar",
+      "texto": true
+    }
+  ],
+  "demo": "",
+  "preguntas": [],
+  "preguntas_error": false,
+  "hallazgos": null,
+  "tests_editados": 0,
+  "bloqueo": false,
+  "unica": false,
+  "revisar": [],
+  "encargado": {
+    "avisos": [],
+    "graves": 0
+  }
+}

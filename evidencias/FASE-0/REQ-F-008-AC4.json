@@ -1,0 +1,12 @@
+{
+ "criterio": "REQ-F-008 AC4",
+ "test": "Organización › REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+ "titulo": "REQ-F-008 AC4 repetir 3 plazas no cambia nada",
+ "ve": [
+  "Apuntados (3 de 3 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/#organizacion",
+ "imagen": "REQ-F-008-AC4.png",
+ "sha256": "sha256:f9d025465aa6493bc7abe6a941b1770c98c2d3d33c1d5992221125b53b2b0d3e",
+ "at": "2026-11-16T00:03:40.794Z"
+}

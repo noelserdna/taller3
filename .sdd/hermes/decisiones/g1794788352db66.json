@@ -1,0 +1,14 @@
+{
+  "verbo": "descarto",
+  "texto": "CH-003: «Plaza confirmada» y «Baja registrada» concuerdan con «plaza» y «baja», no con la persona; los propios ejemplos del criterio lo usan así. No es un fallo de la web: es la frase del criterio, que se aclara aparte.",
+  "actor": {
+    "persona": "yo",
+    "canal": "telegram",
+    "id": "888584395"
+  },
+  "prueba": {
+    "user": "calb79",
+    "msg": "836"
+  },
+  "at": "2026-11-16T00:20:51Z"
+}

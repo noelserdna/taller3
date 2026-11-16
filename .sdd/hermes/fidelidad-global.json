@@ -1,0 +1,59 @@
+{
+ "repo": "/Users/andresleon/proyectos-sdd/taller3",
+ "fase": null,
+ "sha": "09207a6",
+ "congelados": [],
+ "capturas": [],
+ "coherencia": [],
+ "vinculos": [],
+ "lint_capturas": [],
+ "mutantes_cache": {
+  "de_cache": 0,
+  "ejecutados": 0
+ },
+ "mutantes": [
+  {
+   "req": "REQ-F-001",
+   "ac": 1,
+   "texto": "Taller de cerámica",
+   "e2e": [
+    "tests/e2e/criterios.spec.js"
+   ],
+   "unitarios": [],
+   "resultado": "sus tests ya fallan sin mutar nada",
+   "grave": true,
+   "fallan": [
+    "tests/e2e/criterios.spec.js"
+   ]
+  },
+  {
+   "req": "REQ-F-007",
+   "ac": 2,
+   "texto": "Nadie en la lista de espera",
+   "e2e": [
+    "tests/e2e/criterios.spec.js"
+   ],
+   "unitarios": [],
+   "resultado": "sus tests ya fallan sin mutar nada",
+   "grave": true,
+   "fallan": [
+    "tests/e2e/criterios.spec.js"
+   ]
+  },
+  {
+   "req": "REQ-F-008",
+   "ac": 3,
+   "texto": "Indica un número de plazas de 1 o más",
+   "e2e": [
+    "tests/e2e/criterios.spec.js"
+   ],
+   "unitarios": [],
+   "resultado": "sus tests ya fallan sin mutar nada",
+   "grave": true,
+   "fallan": [
+    "tests/e2e/criterios.spec.js"
+   ]
+  }
+ ],
+ "graves": 3
+}

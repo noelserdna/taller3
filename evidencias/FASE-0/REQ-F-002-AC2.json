@@ -1,0 +1,13 @@
+{
+ "criterio": "REQ-F-002 AC2",
+ "test": "Participante › REQ-F-002 AC2 Pablo confirma su plaza",
+ "titulo": "REQ-F-002 AC2 Pablo confirma su plaza",
+ "ve": [
+  "Plaza confirmada para Pablo",
+  "Apuntados (2 de 2 plazas)"
+ ],
+ "url": "http://127.0.0.1:5173/",
+ "imagen": "REQ-F-002-AC2.png",
+ "sha256": "sha256:503df26295c623f0f1434434f737df58d6cb7d03b5c7d9b0676ddb5719667bd6",
+ "at": "2026-11-16T00:03:35.242Z"
+}
