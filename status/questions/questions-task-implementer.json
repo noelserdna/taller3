@@ -6,7 +6,7 @@
       "id": "Q-task-implementer-001",
       "skill": "sdd-task-implementer",
       "contexto": "REQ-NF-001 AC1",
-      "estado": "OPEN",
+      "estado": "ANSWERED",
       "pregunta": "REQ-NF-001 AC1 asks that no catalog word end in -ado/-ada/-ido/-ida, but its own examples and REQ-F-002/REQ-F-005 mandate \"Plaza confirmada para {nombre}\" and \"Baja registrada para {nombre}\" (confirmada, registrada). May the scan accept those two participles because they agree with the nouns plaza and baja, not with the person?",
       "para_cliente": "Los mensajes «Plaza confirmada» y «Baja registrada» llevan una terminación femenina que concuerda con «plaza» y «baja», no con la persona: ¿está bien dejarlos tal cual?",
       "opciones": [
@@ -26,7 +26,12 @@
         }
       ],
       "bloquea": "Nada: se implementa la opción A mientras tanto",
-      "respuesta": null
+      "respuesta": {
+        "letra": "A",
+        "como": "opción recomendada, aceptada por",
+        "quien": "Andres Leon (Cliente)",
+        "fecha": "2026-11-16"
+      }
     }
   ]
 }
